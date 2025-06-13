@@ -66,7 +66,7 @@ const AllPsychologists = () => {
 
       
       <div className="my-6 relative w-full md:w-2/5 px-0 md:px-4">
-        <i className="ri-search-line absolute left-8 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg" />
+        <i className="ri-search-line absolute md:left-8 left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg" />
         <input
           type="text"
           placeholder="Search here using name/number..."

@@ -43,7 +43,7 @@ const AllUsers = () => {
   return (
     <div className="w-full px-0 md:px-2">
       {/* Top Section */}
-      <div className=" gap-6 rounded-2xl bg-[#2D5356] py-5 pl-10 text-white md:flex-row">
+      <div className=" gap-6 rounded-2xl bg-[#2D5356] py-5 md:pl-10 pl-5 text-white md:flex-row">
         <h1 className="text-xl font-semibold md:text-2xl">Add Users</h1>
       </div>
 

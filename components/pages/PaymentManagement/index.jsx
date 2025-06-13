@@ -22,12 +22,19 @@ const transactions = [
     debited: "500 INR",
     status: "Completed",
   },
+    {
+    orderId: "HDYE7484",
+    date: "05 Feb 2019",
+    credited: "--------",
+    debited: "500 INR",
+    status: "Completed",
+  },
 ];
 
 const PaymentManagement = () => {
   return (
     <>
-      <div className="rounded-2xl bg-[#2D5356] py-5 pl-10 text-white md:flex-row">
+      <div className="rounded-2xl bg-[#2D5356] py-5 md:pl-10 pl-5 text-white md:flex-row">
         <h1 className="text-xl font-semibold md:text-2xl">
           Payment Management
         </h1>

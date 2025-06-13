@@ -23,7 +23,7 @@ const Header = ({ isSidebarOpen, setIsSidebarOpen, pageTitle }) => {
             />
           </svg>
         </button>
-        <Link href="#" className="text-gray-800">
+        <Link href="/" className="text-gray-800">
           <h1 className="text-xl font-bold text-nowrap capitalize">
             {pageTitle}
           </h1>
