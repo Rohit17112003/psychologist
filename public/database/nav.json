@@ -1,0 +1,76 @@
+{
+  "navigation": [
+    {
+      "icon": "ri-speed-up-line",
+      "route": "/",
+      "label": "dashboard"
+    },
+    {
+      "icon": "ri-psychotherapy-line",
+      "route": "/all-psychologist",
+      "label": "all psychologist"
+    },
+    {
+      "icon": "ri-group-line",
+      "route": "/all-users",
+      "label": "all users"
+    },
+    {
+      "icon": "ri-folder-open-line",
+      "route": "/payment-management",
+      "label": "payment management"
+    },
+    {
+      "icon": "ri-folder-open-line",
+      "route": "/consultation-history",
+      "label": "consultation history"
+    },
+    {
+      "icon": "ri-bubble-chart-line",
+      "route": "/analytics-reports",
+      "label": "analytics & reports"
+    }
+    
+  ],
+  "stats": [
+    {
+      "icon": "../image/men_icon.svg",
+      "title": "total Psychologist",
+      "value": "203"
+    },
+    {
+      "icon": "../image/men_icon.svg",
+      "title": "total users",
+      "value": "203"
+    },
+    {
+      "icon": "../image/men_icon.svg",
+      "title": "new request for joing",
+      "value": "20"
+    },
+    {
+      "icon": "../image/men_icon.svg",
+      "title": "tatal consultation till completed",
+      "value": "203"
+    }, {
+      "icon": "../image/men_icon.svg",
+      "title": "total consultation pending",
+      "value": "23"
+    },
+    {
+      "icon": "../image/men_icon.svg",
+      "title": "total company earning",
+      "value": "203456783"
+    },
+    {
+      "icon": "../image/men_icon.svg",
+      "title": "total admin earning",
+      "value": "2045563"
+    },
+    {
+      "icon": "../image/men_icon.svg",
+      "title": "total Psychologist earning",
+      "value": "234550"
+    }
+  ]
+}
