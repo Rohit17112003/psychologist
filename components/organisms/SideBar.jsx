@@ -20,24 +20,19 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
       } w-80 md:w-80 xl:w-80`}
     >
       <nav className="flex h-full flex-col gap-7 py-4">
-        <div className="flex px-8">
-          {
-            <Link href="/">
-              <h1 className="text-3xl font-bold">LOGO</h1>
-            </Link>
-            
-          }
-        </div>
-         <div className="flex px-8">
-          {
-            <Link href="/">
-              <h1 className="text-4xl font-bold">OVERVIEW</h1>
-            </Link>
-            
-          }
+        <div className="flex px-8 mt-5">
+          <Link href="/">
+            <h1 className="text-[2.5rem] font-bold text-hcolor">LOGO</h1>
+          </Link>
         </div>
 
-        <ul className="vertical-scrollbar flex h-full w-full flex-col gap-2 text-xl overflow-y-auto px-8  ">
+        <div className="flex px-8 mt-8">
+          <Link href="/">
+            <h1 className="text-4xl font-bold abril text-hcolor">OVERVIEW</h1>
+          </Link>
+        </div>
+
+        <ul className="flex h-full w-full flex-col gap-2 text-xl overflow-y-scroll scrollbar-hidden px-8 mt-5">
           <div className="flex w-full flex-col gap-2">
             {navigation.map((item, index) => {
               const { route, label, icon, subMenu } = item;
@@ -58,7 +53,7 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               route="#"
               label="Log out"
               heroIcon="ri-logout-circle-line"
-              handleClick={() => handleLogout()}
+              handleClick={handleLogout}
             />
           </div>
         </ul>

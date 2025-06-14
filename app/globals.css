@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 @import "tailwindcss";
 
 @theme {
@@ -17,3 +19,15 @@
     display: none;
   }
 }
+
+
+.abril {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  .scrollbar-hidden {
+    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }

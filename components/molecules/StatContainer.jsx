@@ -1,4 +1,11 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 const StatContainer = ({ index, icon, title, value }) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/consultationtable");
+  };
   return (
     <div
       className={`space-y-1 rounded-lg px-5 pt-4 pb-2 shadow ${index < 4 ? "bg-[#56A6A0]" : "bg-primary"} text-light`}
@@ -14,8 +21,17 @@ const StatContainer = ({ index, icon, title, value }) => {
           {value}
         </p>
         <div>
-          <span className={`bg-light rounded-full p-1 ${index < 3 ? "hidden" : ""} cursor-pointer`}>
-            <i className="ri-arrow-right-line text-primary font-medium"></i>
+          <span
+            className={`bg-light rounded-full p-1 ${index < 3 ? "hidden" : ""} cursor-pointer`}
+          >
+            <i
+              onClick={() => {
+                if (index === 3 || index === 4) {
+                  handleClick();
+                }
+              }}
+              className={`ri-arrow-right-line text-primary font-medium`}
+            />
           </span>
         </div>
       </div>

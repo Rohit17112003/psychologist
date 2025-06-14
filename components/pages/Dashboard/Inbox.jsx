@@ -39,7 +39,7 @@ const InboxTable = () => {
         <table className="min-w-[700px] w-full border-collapse text-primary">
           <thead>
             <tr className="bg-[#386B67] text-gray-700">
-              <th className="md:pl-9 pl-4 py-3 text-left text-md font-semibold text-light">
+              <th className="md:pl-9 pl-4 py-3 text-left text-md abril text-light tracking-wider">
                 Inbox
                 <i className="ri-delete-bin-6-line pl-8 cursor-pointer"></i>
                 <i className="ri-star-line px-3 cursor-pointer"></i>
@@ -65,7 +65,7 @@ const InboxTable = () => {
                   <div className="flex items-center gap-2 text-hcolor">
                     <BsThreeDotsVertical />
                     <i className="ri-checkbox-blank-line"></i>
-                    <span>{msg.name}</span>
+                    <span className="abril text-[0.8rem]">{msg.name}</span>
                   </div>
                 </td>
                 <td className="text-light py-2 text-sm whitespace-nowrap px-4 md:px-0">

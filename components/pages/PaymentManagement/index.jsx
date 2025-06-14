@@ -79,7 +79,7 @@ const PaymentManagement = () => {
                   <td className="p-8">{t.credited}</td>
                   <td className="p-8">{t.debited}</td>
                   <td className="p-8">
-                    <span className="inline-block rounded-md bg-green-100 px-4 py-1 text-[#00B69B]">
+                    <span className="inline-block rounded-md bg-green-100 px-4 py-0.5 text-[#00B69B]">
                       {t.status}
                     </span>
                   </td>
