@@ -34,7 +34,7 @@ const messages = [
 
 const InboxTable = () => {
   return (
-    <div className="mx-auto mt-8 md:mt-16 px-2">
+    <div className="mx-auto mt-8 md:mt-16 px-0">
       <div className="overflow-x-auto bg-white rounded-lg">
         <table className="min-w-[700px] w-full border-collapse text-primary">
           <thead>
@@ -62,7 +62,7 @@ const InboxTable = () => {
             {messages.map((msg, index) => (
               <tr key={index} className="hover:bg-gray-200">
                 <td className="px-4 md:px-6 py-2 text-sm font-semibold whitespace-nowrap">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 text-hcolor">
                     <BsThreeDotsVertical />
                     <i className="ri-checkbox-blank-line"></i>
                     <span>{msg.name}</span>

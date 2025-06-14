@@ -1,7 +1,7 @@
 const StatContainer = ({ index, icon, title, value }) => {
   return (
     <div
-      className={`space-y-1 rounded-lg px-4 pt-4 pb-2 shadow ${index < 4 ? "bg-[#56A6A0]" : "bg-primary"} text-light`}
+      className={`space-y-1 rounded-lg px-5 pt-4 pb-2 shadow ${index < 4 ? "bg-[#56A6A0]" : "bg-primary"} text-light`}
     >
       <h2 className="Sans flex items-center gap-3 font-medium">
         <img src={icon} />
@@ -10,7 +10,7 @@ const StatContainer = ({ index, icon, title, value }) => {
       </h2>
 
       <div className="flex items-center justify-between">
-        <p className="Sans pt-3 text-[1.2rem] font-bold md:text-[1.4rem]">
+        <p className="relative bottom-0 pt-3 text-[1.2rem] font-bold md:text-[1.4rem]">
           {value}
         </p>
         <div>

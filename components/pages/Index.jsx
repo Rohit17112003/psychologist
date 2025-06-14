@@ -1,6 +1,7 @@
 import StatContainer from "../molecules/StatContainer";
 import data from "@/public/database/nav.json";
 import InboxTable from "./Dashboard/Inbox";
+import InboxDiv from "./Dashboard/InboxDiv";
 
 const HomePage = () => {
   const { stats } = data;
@@ -14,25 +15,9 @@ const HomePage = () => {
         </section>
       </div>
 
-      <InboxTable/>
+      <InboxTable />
 
-      <section className="grid gap-5 lg:grid-cols-4 mt-10">
-        <div className="container-bg h-80 lg:col-span-2">
-          <h4 className="rounded-t-xl bg-[#843ED4] p-2 text-sm text-white">
-            Total No. of Auctions till Completed
-          </h4>
-        </div>
-        <div className="container-bg h-80">
-          <h4 className="rounded-t-xl bg-[#6425FE] p-2 text-sm text-white">
-            Total No. of Action Products
-          </h4>
-        </div>
-        <div className="container-bg h-80">
-          <h4 className="rounded-t-xl bg-[#FF8A00] p-2 text-sm text-white">
-            All Ongoing Auctions
-          </h4>
-        </div>
-      </section>
+      <InboxDiv />
     </>
   );
 };
