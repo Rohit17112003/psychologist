@@ -6,11 +6,11 @@ const StatContainer = ({ index, icon, title, value }) => {
       <h2 className="Sans flex items-center gap-3 font-medium">
         <img src={icon} />
 
-        <span className="text-[1rem] md:text-[1.15rem]">{title}</span>
+        <span className="text-[1rem] md:text-[1.1rem]">{title}</span>
       </h2>
 
       <div className="flex items-center justify-between">
-        <p className="Sans pt-3 text-[1.2rem] font-bold md:text-[1.5rem]">
+        <p className="Sans pt-3 text-[1.2rem] font-bold md:text-[1.4rem]">
           {value}
         </p>
         <div>
