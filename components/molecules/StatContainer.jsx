@@ -3,9 +3,21 @@ import { useRouter } from "next/navigation";
 
 const StatContainer = ({ index, icon, title, value }) => {
   const router = useRouter();
-  const handleClick = () => {
-    router.push("/consultationtable");
+  const handleConsultation = () => {
+    router.push("/consultation-table");
   };
+  const handleCompnay=()=>{
+    router.push("/company-table")
+  }
+
+  const handleAdmin=()=>{
+    router.push("/admin-table")
+  }
+
+  const handlePsychologist= () =>{
+    router.push("/psychologist-table")
+  }
+
   return (
     <div
       className={`space-y-1 rounded-lg px-5 pt-4 pb-2 shadow ${index < 4 ? "bg-[#56A6A0]" : "bg-primary"} text-light`}
@@ -27,7 +39,16 @@ const StatContainer = ({ index, icon, title, value }) => {
             <i
               onClick={() => {
                 if (index === 3 || index === 4) {
-                  handleClick();
+                  handleConsultation();
+                }
+                 if (index === 5) {
+                  handleCompnay();
+                }
+                 if (index === 6) {
+                  handleAdmin();
+                }
+                 if (index === 7) {
+                  handlePsychologist();
                 }
               }}
               className={`ri-arrow-right-line text-primary font-medium`}

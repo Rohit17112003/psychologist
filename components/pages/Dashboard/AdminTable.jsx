@@ -1,5 +1,3 @@
-
-
 "use client"
  import { useRouter } from "next/navigation";
 
@@ -10,7 +8,7 @@ const transactions = [
     psycho: "Hemant",
     consul: "chat",
     date: "04 Set 2019",
-    status: "Pending",
+    amount: "500 INR",
   },
   {
     orderId: "HDYE7484",
@@ -18,7 +16,7 @@ const transactions = [
     psycho: "Hemant",
     consul: "video",
     date: "28 May 2019-",
-    status: "Completed",
+    amount: "500 INR",
   },
   {
     orderId: "HDYE7484",
@@ -26,7 +24,7 @@ const transactions = [
     psycho: "Hemant",
     consul: "video",
     date: "23 Nov 2019",
-    status: "Pending",
+    amount: "500 INR",
   },
   {
     orderId: "HDYE7484",
@@ -34,18 +32,18 @@ const transactions = [
     psycho: "Hemant",
     consul: "video",
     date: "05 Feb 2019",
-    status: "Completed",
+    amount: "500 INR",
   },
 ];
 
-const ConsultationTable = () => {
+const AdminTable = () => {
 const router = useRouter();
   
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-4  md:pl-6 pl-4 text-white md:flex-row">
         <h1 className="text-xl font-semibold md:text-[1.5rem]">
-         <span><i onClick={() => router.back()} className="ri-arrow-left-line md:mr-9 mr-2 cursor-pointer font-normal"></i></span> Total No. of Consultation
+         <span><i onClick={() => router.back()} className="ri-arrow-left-line md:mr-9 mr-2 cursor-pointer font-normal"></i></span> Total Admin Earning
         </h1>
       </div>
 
@@ -74,8 +72,8 @@ const router = useRouter();
                 <th className="px-6 py-3 text-black">User</th>
                 <th className="px-6 py-3 text-black">Pschologist</th>
                 <th className="px-6 py-3 text-black">Consultation Type</th>
-                <th className="px-6 py-3">Date</th>
-                <th className="rounded-tr-md rounded-br-md px-6 py-3">Status</th>
+                <th className="px-6 py-3">Ttransaction Date</th>
+                <th className="rounded-tr-md rounded-br-md px-6 py-3">Amount</th>
               </tr>
             </thead>
 <tbody>
@@ -86,17 +84,7 @@ const router = useRouter();
       <td className="px-6 py-6 text-black">{t.psycho}</td>
       <td className="px-6 py-6 text-black">{t.consul}</td>
       <td className="md:px-6 py-6 text-hcolor font-medium">{t.date}</td>
-      <td className="px-6 py-6">
-        <span
-          className={`inline-block rounded-md px-4 py-0.5 ${
-            t.status === "Completed"
-              ? "bg-green-100 text-[#00B69B]"
-              : "bg-green-100 px-6 text-red-500"
-          }`}
-        >
-          {t.status}
-        </span>
-      </td>
+      <td className="px-6 py-6 text-hcolor">{t.amount} </td>
     </tr>
   ))}
 </tbody>
@@ -109,5 +97,4 @@ const router = useRouter();
   );
 };
 
-export default ConsultationTable;
-
+export default AdminTable;

@@ -15,7 +15,7 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
 
   return (
     <div
-      className={`fixed inset-y-0 left-0 z-30 transform bg-white shadow transition-transform duration-300 md:relative md:translate-x-0 ${
+      className={`fixed inset-y-0 left-0 z-30 transform bg-white  transition-transform duration-300 md:relative md:translate-x-0 ${
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       } w-80 md:w-80 xl:w-80`}
     >

@@ -27,6 +27,19 @@
   font-style: normal;
 }
 
+.alegreya{
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.Roboto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.Lato {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
   .scrollbar-hidden {
     scrollbar-width: none;     /* Firefox */
     -ms-overflow-style: none;  /* IE 10+ */

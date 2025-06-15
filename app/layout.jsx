@@ -5,7 +5,7 @@ import "remixicon/fonts/remixicon.css";
 // Alegreya Sans font setup
 const alegreyaSans = Alegreya_Sans({
   subsets: ["latin"],
-  weight: ["400", "700"], // optional: aapko jo weight chahiye woh specify karein
+  weight: ["500", "700"], // optional: aapko jo weight chahiye woh specify karein
 });
 
 export const metadata = {
@@ -15,8 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={alegreyaSans.className}>
+    <html lang="en" className="bg-[#ffc0cb17]">
+      <body className={alegreyaSans.className }>
         {children}
       </body>
     </html>
