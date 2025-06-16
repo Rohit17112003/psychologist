@@ -34,7 +34,7 @@ const transactions = [
 const PaymentManagement = () => {
   return (
     <>
-      <div className="rounded-2xl bg-[#2D5356] py-5 md:pl-10 pl-5 text-white md:flex-row">
+      <div className="rounded-2xl bg-[#2D5356] md:py-5 py-3 md:pl-10 pl-5 text-white md:flex-row">
         <h1 className="text-md font-semibold md:text-[1.5rem]">
           Payment Management
         </h1>
