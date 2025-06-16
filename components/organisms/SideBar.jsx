@@ -19,20 +19,20 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       } w-80 md:w-80 xl:w-80`}
     >
-      <nav className="flex h-full flex-col gap-7 py-4">
-        <div className="flex px-8 mt-5">
+      <nav className="flex h-full flex-col md:gap-7 gap-2 py-4">
+        <div className="flex px-8 md:mt-5">
           <Link href="/">
-            <h1 className="text-[2.5rem] font-bold text-hcolor">LOGO</h1>
+            <h1 className="md:text-[2.5rem] text-[1.4rem] font-bold text-hcolor">LOGO</h1>
           </Link>
         </div>
 
-        <div className="flex px-8 mt-8">
+        <div className="flex px-8 md:mt-8">
           <Link href="/">
-            <h1 className="text-4xl font-bold abril text-hcolor">OVERVIEW</h1>
+            <h1 className="md:text-4xl text-[1.2rem] font-bold abril text-hcolor">OVERVIEW</h1>
           </Link>
         </div>
 
-        <ul className="flex h-full w-full flex-col gap-2 text-xl overflow-y-scroll scrollbar-hidden px-8 mt-5">
+        <ul className="flex h-full w-full flex-col gap-2 text-xl overflow-y-scroll scrollbar-hidden px-8 md:mt-5">
           <div className="flex w-full flex-col gap-2">
             {navigation.map((item, index) => {
               const { route, label, icon, subMenu } = item;

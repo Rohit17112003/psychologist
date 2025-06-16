@@ -83,7 +83,7 @@ const ConsultationHistory = () => {
                 <th className="px-8 py-4">User</th>
                 <th className="px-8 py-4">Psychologist</th>
                 <th className="px-8 py-4">Type</th>
-                <th className="rounded-tr-md px-8 py-4">Date/Time</th>
+                <th className="rounded-tr-md md:px-9 px-0 py-4">Date/Time</th>
                 <th className="px-8 py-4">Amount</th>
                 <th className="px-8 py-4">Status</th>
               </tr>
@@ -98,7 +98,7 @@ const ConsultationHistory = () => {
                   <td className="p-8">{t.user}</td>
                   <td className="p-8">{t.psychologist}</td>
                   <td className="p-8">{t.type}</td>
-                  <td className="p-8 px-9">{t.datetime}</td>
+                  <td className="p-8 md:px-9 px-0">{t.datetime}</td>
                   <td className="p-8">{t.amount}</td>
                   <td className="p-8">
                     <span
