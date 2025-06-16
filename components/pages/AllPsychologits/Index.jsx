@@ -130,8 +130,8 @@ const AllPsychologists = () => {
 
       {/* Popup Form */}
       {showPopup && (
-        <div className="bg-opacity-60 fixed inset-0 z-50 flex items-center justify-center  h-screen">
-          <div className="relative w-full max-w-md rounded-xl bg-white p-6 border border-gray-200">
+        <div className="bg-opacity-60 fixed inset-0 z-50 flex items-center justify-center bg-[#000000d8]  px-4 h-screen">
+          <div className="relative w-full max-w-md rounded-xl bg-white p-6 border border-gray-200 ">
             <button
               className="absolute top-3 right-3 cursor-pointer text-xl text-black bg-[#00000023] hover:bg-[#00000034] rounded-full p-1.5"
               onClick={() => setShowPopup(false)}
