@@ -1,37 +1,50 @@
-import React from "react";
+"use client";
+import { useRouter } from "next/navigation";
 
 const transactions = [
   {
     orderId: "HDYE7484",
-    date: "04 Sep 2019",
-    credited: "--------",
-    debited: "500 INR",
-    status: "Completed",
+    datetime: "04 Sep 2019 02:00 pm",
+    user: "Rohit",
+    psychologist: "Vedant",
+    amount: "500 INR",
+    type: "Audio",
+    status: "Booked",
   },
   {
     orderId: "HDYE7484",
-    date: "28 May 2019",
-    credited: "500 INR",
-    debited: "--------",
-    status: "Completed",
+    datetime: "28 May 2019 02:00 pm",
+    user: "Rohit",
+    psychologist: "Vedant",
+    amount: "500 INR",
+    type: "Video",
+    status: "Ongoing",
   },
   {
     orderId: "HDYE7484",
-    date: "23 Nov 2019",
-    credited: "--------",
-    debited: "500 INR",
-    status: "Completed",
+    datetime: "23 Nov 2019 02:00 pm",
+    user: "Rohit",
+    psychologist: "Vedant",
+    amount: "500 INR",
+    type: "Video",
+    status: "Rejected",
   },
   {
     orderId: "HDYE7484",
-    date: "05 Feb 2019",
-    credited: "--------",
-    debited: "500 INR",
-    status: "Completed",
+    datetime: "05 Feb 2019 02:00 pm",
+    user: "Rohit",
+    psychologist: "Vedant",
+    amount: "500 INR",
+    type: "Video",
+    status: "Upcoming",
   },
 ];
 
 const ConsultationHistory = () => {
+  const router = useRouter();
+  const handleBookSession = () => {
+    router.push("/book-session");
+  };
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-5 pl-5 text-white md:flex-row md:pl-10">
@@ -51,8 +64,8 @@ const ConsultationHistory = () => {
               className="w-full rounded-full border border-gray-300 py-2 pr-4 pl-10 outline-none focus:ring-[#2D5356]"
             />
           </div>
-          <div className="flex items-center md:gap-3 gap-1.5">
-            <button className="text-light cursor-pointer rounded-md bg-green-500 md:px-5 px-2 py-2 text-[0.9rem] md:text-[1.1rem]">
+          <div className="flex items-center gap-1.5 md:gap-3">
+            <button onClick={handleBookSession} className="text-light cursor-pointer rounded-md bg-green-500 px-2 py-2 text-[0.9rem] md:px-5 md:text-[1.1rem]">
               Book Session
             </button>
             <span className="text-primary text-base md:text-lg">
@@ -65,12 +78,14 @@ const ConsultationHistory = () => {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[600px] border-collapse text-left">
             <thead>
-              <tr className="bg-tertiary text-primary text-base font-bold md:text-lg">
+              <tr className="bg-tertiary text-secondary text-base font-bold md:text-lg">
                 <th className="rounded-tl-md px-8 py-4">Order ID</th>
-                <th className="px-8 py-4">Transaction Date</th>
-                <th className="px-8 py-4">Credited</th>
-                <th className="px-8 py-4">Debited</th>
-                <th className="rounded-tr-md px-8 py-4">Status</th>
+                <th className="px-8 py-4">User</th>
+                <th className="px-8 py-4">Psychologist</th>
+                <th className="px-8 py-4">Type</th>
+                <th className="rounded-tr-md px-8 py-4">Date/Time</th>
+                <th className="px-8 py-4">Amount</th>
+                <th className="px-8 py-4">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -80,11 +95,15 @@ const ConsultationHistory = () => {
                   className="text-primary border-b border-[#D5D5D5] font-medium"
                 >
                   <td className="p-8">{t.orderId}</td>
-                  <td className="p-8">{t.date}</td>
-                  <td className="p-8">{t.credited}</td>
-                  <td className="p-8">{t.debited}</td>
+                  <td className="p-8">{t.user}</td>
+                  <td className="p-8">{t.psychologist}</td>
+                  <td className="p-8">{t.type}</td>
+                  <td className="p-8 px-9">{t.datetime}</td>
+                  <td className="p-8">{t.amount}</td>
                   <td className="p-8">
-                    <span className="inline-block rounded-md bg-green-100 px-4 py-1 text-[#00B69B]">
+                    <span
+                      className={`flex justify-center rounded-md px-4 py-0.5 md:w-24 ${["bg-green-100", "bg-yellow-100", "bg-red-100", "bg-blue-100"][i] || "bg-gray-100"} ${["text-[#00B69B]", "text-[#FFB020]", "text-[#F04438]", "text-[#2874e7]"][i] || "text-gray-500"}`}
+                    >
                       {t.status}
                     </span>
                   </td>

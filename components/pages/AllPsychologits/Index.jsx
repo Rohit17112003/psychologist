@@ -106,7 +106,7 @@ const AllPsychologists = () => {
       </div>
 
       {/* Psychologist Cards */}
-      <div className="grid grid-cols-1 gap-7 gap-x-12 px-0 sm:grid-cols-2 md:px-4 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-7 gap-x-12 px-0 sm:grid-cols-2 md:px-4 lg:grid-cols-3 pb-16">
         {psychologists.map((psych, index) => (
           <div
             key={index}
@@ -130,49 +130,78 @@ const AllPsychologists = () => {
 
       {/* Popup Form */}
       {showPopup && (
-        <div className="bg-opacity-60 fixed inset-0 z-50 flex items-center justify-center">
-          <div className="relative w-full max-w-md rounded-xl bg-white p-6">
+        <div className="bg-opacity-60 fixed inset-0 z-50 flex items-center justify-center  h-screen">
+          <div className="relative w-full max-w-md rounded-xl bg-white p-6 border border-gray-200">
             <button
-              className="absolute top-3 right-3 cursor-pointer text-xl text-gray-600"
+              className="absolute top-3 right-3 cursor-pointer text-xl text-black bg-[#00000023] hover:bg-[#00000034] rounded-full p-1.5"
               onClick={() => setShowPopup(false)}
             >
               <IoMdClose />
             </button>
-            <h2 className="mb-4 text-lg font-semibold">Add Psychologist</h2>
+            <div className="flex justify-center">
+              <img src="../image/profileEdit.svg" alt="profileEdit" className="pb-4"/>
+              <img src="../image/edit.svg" alt="profileEdit" className=" absolute mt-21 ml-22 cursor-pointer"/>
+            </div>
             <form onSubmit={handleAddPsychologist} className="space-y-4">
+               <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-user-3-fill text-secondary text-2xl"></i>
               <input
                 type="text"
-                placeholder="Name"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                className="w-full rounded-md border border-gray-300 px-3 py-2"
+                placeholder="Enter Your Name"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
                 required
               />
+            </div>
+              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-translate-ai-2 text-secondary text-2xl"></i>
               <input
                 type="text"
-                placeholder="Role"
-                value={formData.role}
-                onChange={(e) =>
-                  setFormData({ ...formData, role: e.target.value })
-                }
-                className="w-full rounded-md border border-gray-300 px-3 py-2"
+                placeholder="Language"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
                 required
               />
+            </div>
+            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-graduation-cap-fill text-secondary text-2xl"></i>
               <input
                 type="text"
-                placeholder="Experience"
-                value={formData.experience}
-                onChange={(e) =>
-                  setFormData({ ...formData, experience: e.target.value })
-                }
-                className="w-full rounded-md border border-gray-300 px-3 py-2"
+                placeholder="Educational Qualififacation"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
                 required
               />
+            </div>
+            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-user-5-fill text-secondary text-2xl"></i>
+              <input
+                type="text"
+                placeholder="Experience In Years"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                required
+              />
+            </div>
+           
+            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-user-star-fill text-secondary text-2xl"></i>
+              <input
+                type="text"
+                placeholder="Specialixation"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                required
+              />
+            </div>
+            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-hashtag text-secondary text-2xl"></i>
+              <input
+                type="email"
+                placeholder="Email Id"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                required
+              />
+            </div>
+           
               <button
                 type="submit"
-                className="w-full cursor-pointer rounded-md bg-[#2D5356] py-2 text-white hover:bg-[#244747]"
+                className="w-full cursor-pointer rounded-md bg-hcolor py-2 text-white hover:bg-[#244747] md:text-[1.2rem] text-[1rem]"
               >
                 Add Doctor
               </button>

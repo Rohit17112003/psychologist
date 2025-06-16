@@ -1,11 +1,11 @@
 import React from "react";
-import Profile from "@/components/pages/AllPsychologits/Profile";
+import BookSession from "@/components/pages/ConsultationHistory/BookSession";
 import MainLayout from "@/components/templates/MainLayout";
 
 const page = () => {
   return (
     <MainLayout pageTitle={"Hi Rohit 👋"}>
-      <Profile />
+      <BookSession />
     </MainLayout>
   );
 };

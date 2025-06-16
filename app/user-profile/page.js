@@ -1,11 +1,11 @@
 import React from "react";
-import Profile from "@/components/pages/AllPsychologits/Profile";
+import UserProfile from "@/components/pages/AllUsers/UserProfile";
 import MainLayout from "@/components/templates/MainLayout";
 
 const page = () => {
   return (
     <MainLayout pageTitle={"Hi Rohit 👋"}>
-      <Profile />
+      <UserProfile />
     </MainLayout>
   );
 };
