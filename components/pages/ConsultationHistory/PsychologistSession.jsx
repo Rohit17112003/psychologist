@@ -42,8 +42,8 @@ const psychologists = [
 
 const PsychologistSession = () => {
   const router = useRouter();
-  const handlePsychologistSession = () => {
-    router.push("/");
+  const handleDateSlotSession = () => {
+    router.push("/date-slot-session");
   };
   return (
     <div className="w-full px-0 md:px-2">
@@ -77,7 +77,7 @@ const PsychologistSession = () => {
 
       <div
         className="mt-12 grid cursor-pointer grid-cols-1 gap-7 gap-x-13 px-0 pb-16 sm:grid-cols-2 md:px-6 lg:grid-cols-3"
-        onClick={handlePsychologistSession}
+        onClick={handleDateSlotSession}
       >
         {psychologists.map((psych, index) => (
           <div
