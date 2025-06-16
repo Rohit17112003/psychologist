@@ -89,7 +89,7 @@ const BookSession = () => {
               alt={psych.name}
               className="h-24 w-24 rounded-full object-cover p-2.5"
             />
-            <h2 className="text-primary text-lg font-semibold">{psych.name}</h2>
+            <h2 className="text-primary md:text-lg text-sm font-semibold">{psych.name}</h2>
             <p className="text-sm text-gray-600">{psych.role}</p>
             <p className="text-sm text-gray-500">{psych.experience}</p>
             <button className="mt-2 font-medium text-blue-400 hover:underline">
