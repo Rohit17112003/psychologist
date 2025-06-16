@@ -36,10 +36,10 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           </Link>
         </div>
 
-        <ul className="scrollbar-hidden flex h-full w-full flex-col gap-2 overflow-y-scroll px-8 text-xl md:mt-5">
+        <ul className="scrollbar-hidden flex h-full w-full flex-col gap-2 overflow-y-scroll px-6 text-lg md:text-xl md:mt-5">
           <div className="flex w-full flex-col gap-2">
             {navigation.map((item, index) => {
-              const { route, label, icon, subMenu } = item;
+              const { route, label, icon, children } = item;
               return (
                 <DashboardLink
                   key={index}
@@ -48,7 +48,7 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                   label={label}
                   heroIcon={icon}
                   handleClick={() => setIsSidebarOpen(false)}
-                  subMenu={subMenu}
+                  subMenu={children || []}
                 />
               );
             })}
@@ -58,25 +58,29 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               label="Log out"
               heroIcon="ri-logout-circle-line"
               handleClick={handleLogout}
-              
             />
-           <div className="md:pr-20 pr-26 pb-10 flex relative justify-center mt-10">
-             <img src="../image/Question.svg" alt="Question" className=" absolute -mt-7 " />
-            <div className="text-light flex flex-col justify-center rounded-xl bg-blue-600 md:px-2  px-3 pt-12 pb-5 jakarta">
-              <h1 className="text-center text-[1.1rem] md:text-[1.5rem]">
-                Help Center
-              </h1>
-              <p className="text-center text-[0.65rem] md:text-[0.75rem] md:py-3 py-2">
-                Having Trouble in Exploring Please contact us for more
-                questions.
-              </p>
-              <div className="flex justify-center">
-                <button className="bg-light hover:text-light rounded-lg px-3 py-1.5 text-[0.7rem] text-blue-500 hover:bg-black md:text-[0.8rem] cursor-pointer">
-                  Go To Help Center
-                </button>
+
+            <div className="md:pr-20 pr-26 pb-10 flex relative justify-center mt-10">
+              <img
+                src="../image/Question.svg"
+                alt="Question"
+                className="absolute -mt-7"
+              />
+              <div className="text-light flex flex-col justify-center rounded-xl bg-blue-600 md:px-2  px-3 pt-12 pb-5 jakarta">
+                <h1 className="text-center text-[1.1rem] md:text-[1.5rem]">
+                  Help Center
+                </h1>
+                <p className="text-center text-[0.65rem] md:text-[0.75rem] md:py-3 py-2">
+                  Having Trouble in Exploring Please contact us for more
+                  questions.
+                </p>
+                <div className="flex justify-center">
+                  <button className="bg-light hover:text-light rounded-lg px-3 py-1.5 text-[0.7rem] text-blue-500 hover:bg-black md:text-[0.8rem] cursor-pointer">
+                    Go To Help Center
+                  </button>
+                </div>
               </div>
             </div>
-           </div>
           </div>
         </ul>
       </nav>

@@ -18,7 +18,19 @@
     {
       "icon": "ri-folder-open-line",
       "route": "/payment-management",
-      "label": "payment management"
+      "label": "payment management",
+      "children": [
+        {
+          "label": "User",
+          "route": "/payment-management/user",
+          "icon": "ri-folder-open-line"
+        },
+        {
+          "label": "Psychologist",
+          "icon": "ri-folder-open-line",
+          "route": "/payment-management/psychologist"
+        }
+      ]
     },
     {
       "icon": "ri-folder-open-line",
@@ -30,7 +42,6 @@
       "route": "/analytics-reports",
       "label": "analytics & reports"
     }
-    
   ],
   "stats": [
     {
@@ -52,7 +63,8 @@
       "icon": "../image/men_icon.svg",
       "title": "tatal consultation till completed",
       "value": "203"
-    }, {
+    },
+    {
       "icon": "../image/men_icon.svg",
       "title": "total consultation pending",
       "value": "23"

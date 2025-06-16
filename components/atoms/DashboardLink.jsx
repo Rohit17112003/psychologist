@@ -11,12 +11,15 @@ const DashboardLink = ({
   handleClick = () => {},
 }) => {
   const [isSubMenOpen, setIsSubMenuOpen] = useState(false);
+
   const toggleSubMenu = () => {
-    setIsSubMenuOpen((prevState) => !prevState);
+    if (subMenu.length > 0) {
+      setIsSubMenuOpen((prev) => !prev);
+    }
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-1">
       <li
         onClick={handleClick}
         className="flex w-full items-center justify-between"
@@ -28,39 +31,32 @@ const DashboardLink = ({
             active
               ? "bg-primary/10 text-primary"
               : "bg-transparent text-secondary"
-          } flex w-full flex-row  items-center justify-between rounded-md px-3 py-2.5 transition-all duration-200 hover:bg-primary/5 hover:text-primary`}
+          } flex w-full flex-row items-center justify-between rounded-md px-3 py-2.5 transition-all duration-200 hover:bg-primary/5 hover:text-primary`}
         >
           <span className="text-md flex items-center gap-1.5">
             <i className={`${heroIcon} ri-lg`}></i>
-            <span className=" font-medium capitalize">{label}</span>
+            <span className="font-medium capitalize">{label}</span>
           </span>
           {subMenu.length > 0 && (
-            <span className=" text-md font-medium capitalize">
-              <i
-                className={` ${active ? " text-primary" : "text-primary"} ${
-                  isSubMenOpen
-                    ? "ri-arrow-down-s-line"
-                    : "ri-arrow-right-s-line"
-                } ri-lg`}
-              ></i>
-            </span>
+            <i
+              className={`${
+                isSubMenOpen ? "ri-arrow-down-s-line" : "ri-arrow-right-s-line"
+              } ri-lg text-primary`}
+            ></i>
           )}
         </Link>
       </li>
+
       {subMenu.length > 0 && (
         <div className={`flex-col gap-1 ${isSubMenOpen ? "flex" : "hidden"}`}>
           {subMenu.map((item, index) => (
             <Link
               key={index}
               href={item.route}
-              className="ms-4 flex w-[85%] flex-row items-center rounded-md px-3 py-2.5 text-gray-400 transition-all duration-200 hover:bg-blue-50 hover:text-gray-600"
+              className="ms-6 flex items-center gap-2 rounded-md px-3 py-2.5 text-sm text-gray-500 hover:bg-primary/10 hover:text-primary"
             >
-              <span>
-                <i className={`${item.icon} ri-lg`}></i>
-              </span>
-              <span className="text-sm font-medium capitalize">
-                {item.label}
-              </span>
+              <i className={`${item.icon} ri-md`}></i>
+              <span className="capitalize">{item.label}</span>
             </Link>
           ))}
         </div>

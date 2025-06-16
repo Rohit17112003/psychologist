@@ -6,7 +6,8 @@ const transactions = [
     date: "04 Sep 2019",
     credited: "--------",
     debited: "500 INR",
-    status: "Completed",
+    status: "Pending",
+    settelment:"Settlement"
   },
   {
     orderId: "HDYE7484",
@@ -14,24 +15,27 @@ const transactions = [
     credited: "500 INR",
     debited: "--------",
     status: "Completed",
+    settelment:""
   },
   {
     orderId: "HDYE7484",
     date: "23 Nov 2019",
     credited: "--------",
     debited: "500 INR",
-    status: "Completed",
+    status: "Pending",
+    settelment:"Settlement"
   },
     {
     orderId: "HDYE7484",
     date: "05 Feb 2019",
     credited: "--------",
     debited: "500 INR",
-    status: "Completed",
+    status: "Pending",
+    settelment:"Settlement"
   },
 ];
 
-const PaymentManagement = () => {
+const Psychologist = () => {
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] md:py-5 py-3 md:pl-10 pl-5 text-white md:flex-row">
@@ -66,6 +70,7 @@ const PaymentManagement = () => {
                 <th className="px-8 py-4">Credited</th>
                 <th className="px-8 py-4">Debited</th>
                 <th className="rounded-tr-md px-8 py-4">Status</th>
+                <th className="rounded-tr-md px-8 py-4">Settlement</th>
               </tr>
             </thead>
             <tbody>
@@ -79,9 +84,14 @@ const PaymentManagement = () => {
                   <td className="p-8">{t.credited}</td>
                   <td className="p-8">{t.debited}</td>
                   <td className="p-8">
-                    <span className="inline-block rounded-md bg-green-100 px-4 py-0.5 text-[#00B69B]">
+                    <span className={`flex justify-center rounded-md px-4 py-0.5 md:w-24 ${["", "bg-blue-100", "", ""][i] || "bg-pink-100"} ${["", "text-[#00B69B]", "", ""][i] || "text-[#F13E3E]"}`}>
                       {t.status}
                     </span>
+                  </td>
+                   <td className={`p-8  ${i === 1 ? "hidden" : "block"}`}>
+    <span className={`inline-block rounded-md bg-hcolor px-4 py-0.5 text-light`}>
+  {t.settelment}
+</span>
                   </td>
                 </tr>
               ))}
@@ -93,4 +103,4 @@ const PaymentManagement = () => {
   );
 };
 
-export default PaymentManagement;
+export default Psychologist;
