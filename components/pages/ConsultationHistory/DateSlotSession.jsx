@@ -60,7 +60,7 @@ const DateSlotSession = () => {
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-4 pl-4 text-white md:flex-row md:pl-6">
-        <div className="flex items-center justify-between text-xl font-semibold md:text-[1.5rem]">
+        <div className="text-md flex items-center justify-between font-semibold md:text-[1.5rem]">
           <h1>
             <span>
               <i
@@ -84,13 +84,13 @@ const DateSlotSession = () => {
                   <FaCheck />
                 </div>
                 <p className="text-primary Roboto text-xs font-medium">
-                  <i className="ri-star-fill text-[1.1rem] text-yellow-400 pr-1"></i>
+                  <i className="ri-star-fill pr-1 text-[1.1rem] text-yellow-400"></i>
                   4.2
                 </p>
               </div>
 
               <div className="-mt-4 leading-14">
-                <h2 className="text-hcolor abril h-12 text-[1.1rem] font-bold tracking-wide md:text-[1.6rem]">
+                <h2 className="text-hcolor abril text-sm font-bold tracking-wide md:text-[1.6rem]">
                   Olischuk Olga
                 </h2>
                 <p className="text-primary text-sm">
@@ -209,7 +209,7 @@ const DateSlotSession = () => {
             </div>
             {/* Time Slots */}
             <div className="bg-light mt-3 rounded-lg px-2 py-3">
-              <h4 className="text-md text-hcolor mb-2  md:text-[1.1rem]">
+              <h4 className="text-md text-hcolor mb-2 md:text-[1.1rem]">
                 Afternoon 7 slots
               </h4>
               <hr className="pb-3 text-gray-300"></hr>
@@ -233,7 +233,7 @@ const DateSlotSession = () => {
               </div>
             </div>
             <div className="bg-light mt-3 rounded-lg px-2 py-3">
-              <h4 className="text-md text-hcolor mb-2  md:text-[1.1rem]">
+              <h4 className="text-md text-hcolor mb-2 md:text-[1.1rem]">
                 Evening 5 slots
               </h4>
               <hr className="pb-3 text-gray-300"></hr>
@@ -248,14 +248,24 @@ const DateSlotSession = () => {
                 ))}
               </div>
             </div>
-             <div className="bg-light mt-3  rounded-lg py-2 px-3 flex items-center justify-between">
-               <h4 className="text-md md:text-[1.05rem]  text-hcolor ">Select Session  Duration 30 / 60 min</h4>
-              <span className="text-secondary text-[1.25rem] cursor-pointer"> <IoMdArrowDropdown/></span>
-             </div>
-              <div className="bg-light mt-3  rounded-lg py-2 px-3 flex items-center justify-between">
-               <h4 className="text-md md:text-[1.05rem]  text-hcolor ">Select Session  Type Call / Video Call </h4>
-              <span className="text-secondary text-[1.25rem] cursor-pointer"> <IoMdArrowDropdown/></span>
-             </div>
+            <div className="bg-light mt-3 flex items-center justify-between rounded-lg px-3 py-2">
+              <h4 className="text-md text-hcolor md:text-[1.05rem]">
+                Select Session Duration 30 / 60 min
+              </h4>
+              <span className="text-secondary cursor-pointer text-[1.25rem]">
+                {" "}
+                <IoMdArrowDropdown />
+              </span>
+            </div>
+            <div className="bg-light mt-3 flex items-center justify-between rounded-lg px-3 py-2">
+              <h4 className="text-md text-hcolor md:text-[1.05rem]">
+                Select Session Type Call / Video Call{" "}
+              </h4>
+              <span className="text-secondary cursor-pointer text-[1.25rem]">
+                {" "}
+                <IoMdArrowDropdown />
+              </span>
+            </div>
           </div>
         </div>
       </div>

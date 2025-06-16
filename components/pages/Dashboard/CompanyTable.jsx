@@ -42,7 +42,7 @@ const CompanyTable = () => {
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-4 pl-4 text-white md:flex-row md:pl-6">
-        <h1 className="text-xl font-semibold md:text-[1.5rem]">
+        <h1 className="text-md font-semibold md:text-[1.5rem]">
           <span>
             <i
               onClick={() => router.back()}

@@ -22,7 +22,7 @@ const UserProfile = () => {
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-4 pl-4 text-white md:flex-row md:pl-6">
-        <div className="flex items-center justify-between text-xl font-semibold md:text-[1.5rem]">
+        <div className="flex items-center justify-between text-md font-semibold md:text-[1.5rem]">
           <h1>
             <span>
               <i

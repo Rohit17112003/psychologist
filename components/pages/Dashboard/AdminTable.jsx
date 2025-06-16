@@ -1,10 +1,10 @@
-"use client"
- import { useRouter } from "next/navigation";
+"use client";
+import { useRouter } from "next/navigation";
 
 const transactions = [
   {
     orderId: "HDYE7484",
-    user:"Rohit",
+    user: "Rohit",
     psycho: "Hemant",
     consul: "chat",
     date: "04 Set 2019",
@@ -12,15 +12,15 @@ const transactions = [
   },
   {
     orderId: "HDYE7484",
-    user:"Rohit",
+    user: "Rohit",
     psycho: "Hemant",
     consul: "video",
-    date: "28 May 2019-",
+    date: "28 May 2019",
     amount: "500 INR",
   },
   {
     orderId: "HDYE7484",
-    user:"Rohit",
+    user: "Rohit",
     psycho: "Hemant",
     consul: "video",
     date: "23 Nov 2019",
@@ -28,7 +28,7 @@ const transactions = [
   },
   {
     orderId: "HDYE7484",
-    user:"Rohit",
+    user: "Rohit",
     psycho: "Hemant",
     consul: "video",
     date: "05 Feb 2019",
@@ -37,13 +37,19 @@ const transactions = [
 ];
 
 const AdminTable = () => {
-const router = useRouter();
-  
+  const router = useRouter();
+
   return (
     <>
-      <div className="rounded-2xl bg-[#2D5356] py-4  md:pl-6 pl-4 text-white md:flex-row">
-        <h1 className="text-xl font-semibold md:text-[1.5rem]">
-         <span><i onClick={() => router.back()} className="ri-arrow-left-line md:mr-9 mr-2 cursor-pointer font-normal"></i></span> Total Admin Earning
+      <div className="rounded-2xl bg-[#2D5356] py-4 pl-4 text-white md:flex-row md:pl-6">
+        <h1 className="text-md font-semibold md:text-[1.5rem]">
+          <span>
+            <i
+              onClick={() => router.back()}
+              className="ri-arrow-left-line mr-2 cursor-pointer font-normal md:mr-9"
+            ></i>
+          </span>{" "}
+          Total Admin Earning
         </h1>
       </div>
 
@@ -68,28 +74,35 @@ const router = useRouter();
           <table className="w-full min-w-[600px] border-collapse text-left">
             <thead>
               <tr className="bg-tertiary text-hcolor text-base font-bold md:text-lg">
-                <th className="rounded-tl-md rounded-bl-md px-6 py-3">Order ID</th>
+                <th className="rounded-tl-md rounded-bl-md px-6 py-3">
+                  Order ID
+                </th>
                 <th className="px-6 py-3 text-black">User</th>
                 <th className="px-6 py-3 text-black">Pschologist</th>
                 <th className="px-6 py-3 text-black">Consultation Type</th>
                 <th className="px-6 py-3">Ttransaction Date</th>
-                <th className="rounded-tr-md rounded-br-md px-6 py-3">Amount</th>
+                <th className="rounded-tr-md rounded-br-md px-6 py-3">
+                  Amount
+                </th>
               </tr>
             </thead>
-<tbody>
-  {transactions.map((t, i) => (
-    <tr key={i} className="border-b-2 border-[#d5d5d552] font-medium">
-      <td className="px-6 py-6 text-hcolor font-medium">{t.orderId}</td>
-      <td className="px-6 py-6 text-black">{t.user}</td>
-      <td className="px-6 py-6 text-black">{t.psycho}</td>
-      <td className="px-6 py-6 text-black">{t.consul}</td>
-      <td className="md:px-6 py-6 text-hcolor font-medium">{t.date}</td>
-      <td className="px-6 py-6 text-hcolor">{t.amount} </td>
-    </tr>
-  ))}
-</tbody>
-
-
+            <tbody>
+              {transactions.map((t, i) => (
+                <tr
+                  key={i}
+                  className="border-b-2 border-[#d5d5d552] font-medium"
+                >
+                  <td className="text-hcolor px-6 py-6 font-medium">
+                    {t.orderId}
+                  </td>
+                  <td className="px-6 py-6 text-black">{t.user}</td>
+                  <td className="px-6 py-6 text-black">{t.psycho}</td>
+                  <td className="px-6 py-6 text-black">{t.consul}</td>
+                  <td className="text-hcolor px-6 py-6">{t.date}</td>
+                  <td className="text-hcolor px-6 py-6">{t.amount} </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       </div>

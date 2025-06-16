@@ -3,41 +3,41 @@ import { useRouter } from "next/navigation";
 
 const psychologists = [
   {
-      name: "Nitesh Nikhade",
-      role: "Psychologist",
-      experience: "12 Years Experience",
-      image: "../image/card_img.svg",
-    },
-    {
-      name: "Nitesh Nikhade",
-      role: "Psychologist",
-      experience: "12 Years Experience",
-      image: "../image/card_img.svg",
-    },
-    {
-      name: "Nitesh Nikhade",
-      role: "Psychologist",
-      experience: "12 Years Experience",
-      image: "../image/card_img.svg",
-    },
-    {
-      name: "Nitesh Nikhade",
-      role: "Psychologist",
-      experience: "12 Years Experience",
-      image: "../image/card_img.svg",
-    },
-    {
-      name: "Nitesh Nikhade",
-      role: "Psychologist",
-      experience: "12 Years Experience",
-      image: "../image/card_img.svg",
-    },
-    {
-      name: "Nitesh Nikhade",
-      role: "Psychologist",
-      experience: "12 Years Experience",
-      image: "../image/card_img.svg",
-    },
+    name: "Nitesh Nikhade",
+    role: "Psychologist",
+    experience: "12 Years Experience",
+    image: "../image/card_img.svg",
+  },
+  {
+    name: "Nitesh Nikhade",
+    role: "Psychologist",
+    experience: "12 Years Experience",
+    image: "../image/card_img.svg",
+  },
+  {
+    name: "Nitesh Nikhade",
+    role: "Psychologist",
+    experience: "12 Years Experience",
+    image: "../image/card_img.svg",
+  },
+  {
+    name: "Nitesh Nikhade",
+    role: "Psychologist",
+    experience: "12 Years Experience",
+    image: "../image/card_img.svg",
+  },
+  {
+    name: "Nitesh Nikhade",
+    role: "Psychologist",
+    experience: "12 Years Experience",
+    image: "../image/card_img.svg",
+  },
+  {
+    name: "Nitesh Nikhade",
+    role: "Psychologist",
+    experience: "12 Years Experience",
+    image: "../image/card_img.svg",
+  },
 ];
 
 const PsychologistSession = () => {
@@ -49,7 +49,7 @@ const PsychologistSession = () => {
     <div className="w-full px-0 md:px-2">
       {/* Top Section */}
       <div className="rounded-2xl bg-[#2D5356] py-4 pl-4 text-white md:flex-row md:pl-6">
-        <div className="flex items-center justify-between text-xl font-semibold md:text-[1.5rem]">
+        <div className="text-md flex items-center justify-between font-semibold md:text-[1.5rem]">
           <h1>
             <span>
               <i
@@ -62,7 +62,7 @@ const PsychologistSession = () => {
         </div>
       </div>
 
-      <div className="relative mt-10 ml-2 flex w-10/12 items-center gap-3 md:w-3/6">
+      <div className="relative mt-10 flex items-center md:gap-3 gap-5 md:ml-2 md:w-6/12">
         <i className="ri-search-line text-secondary absolute top-1/2 left-4 -translate-y-1/2 text-lg" />
         <input
           type="text"

@@ -17,7 +17,7 @@ const transactions = [
     user:"Rohit",
     psycho: "Hemant",
     consul: "video",
-    date: "28 May 2019-",
+    date: "28 May 2019",
     status: "Completed",
   },
   {
@@ -44,7 +44,7 @@ const router = useRouter();
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-4  md:pl-6 pl-4 text-white md:flex-row">
-        <h1 className="text-xl font-semibold md:text-[1.5rem]">
+        <h1 className="text-md font-semibold md:text-[1.5rem]">
          <span><i onClick={() => router.back()} className="ri-arrow-left-line md:mr-9 mr-2 cursor-pointer font-normal"></i></span> Total No. of Consultation
         </h1>
       </div>

@@ -15,7 +15,7 @@ const transactions = [
     user: "Rohit",
     psycho: "Hemant",
     consul: "video",
-    date: "28 May 2019-",
+    date: "28 May 2019",
     amount: "500 INR",
   },
   {
@@ -80,7 +80,7 @@ const PsychologistTable = () => {
                 <th className="px-6 py-3 text-black">User</th>
                 <th className="px-6 py-3 text-black">Pschologist</th>
                 <th className="px-6 py-3 text-black">Consultation Type</th>
-                <th className="px-6 py-3">Date</th>
+                <th className="md:px-6 pr-12 md:pr-0  py-3">Date</th>
                 <th className="rounded-tr-md rounded-br-md px-6 py-3">
                   Amount
                 </th>
@@ -98,7 +98,7 @@ const PsychologistTable = () => {
                   <td className="px-6 py-6 text-black">{t.user}</td>
                   <td className="px-6 py-6 text-black">{t.psycho}</td>
                   <td className="px-6 py-6 text-black">{t.consul}</td>
-                  <td className="text-hcolor md:px-6 py-6 font-medium">
+                  <td className="text-hcolor md:px-6 py-6 ">
                     {t.date}
                   </td>
                   <td className="text-hcolor px-6 py-6"> {t.amount} </td>

@@ -49,7 +49,7 @@ const BookSession = () => {
     <div className="w-full px-0 md:px-2">
       {/* Top Section */}
       <div className="rounded-2xl bg-[#2D5356] py-4 pl-4 text-white md:flex-row md:pl-6">
-        <div className="flex items-center justify-between text-xl font-semibold md:text-[1.5rem]">
+        <div className="text-md flex items-center justify-between font-semibold md:text-[1.5rem]">
           <h1>
             <span>
               <i
@@ -62,14 +62,17 @@ const BookSession = () => {
         </div>
       </div>
 
-      <div className="relative flex items-center gap-3 w-10/12 md:w-3/6 mt-10 ml-2">
-        <i className="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-lg text-secondary" />
+      <div className="relative mt-10 flex justify-between items-center md:gap-3 gap-5 md:ml-2  md:w-6/12">
+        <i className="ri-search-line text-secondary absolute top-1/2 left-4 -translate-y-1/2 text-lg" />
         <input
           type="text"
           placeholder="Search here...."
-          className="w-full rounded-full border border-gray-300 py-2 pr-4 pl-10 outline-none focus:ring-[#2D5356] text-secondary"
+          className="text-secondary w-full rounded-full border border-gray-300 py-2 pr-4 pl-10 outline-none focus:ring-[#2D5356]"
         />
-        <p className="text-secondary md:text-[1.2rem] text-[1rem]"><i className="ri-filter-line md:text-[1.4rem] text-[1.2rem] ml-1"></i>Filter</p>
+        <p className="text-secondary text-[1rem] md:text-[1.2rem]">
+          <i className="ri-filter-line ml-1 text-[1.2rem] md:text-[1.4rem]"></i>
+          Filter
+        </p>
       </div>
 
       <div

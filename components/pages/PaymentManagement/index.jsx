@@ -35,7 +35,7 @@ const PaymentManagement = () => {
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-5 md:pl-10 pl-5 text-white md:flex-row">
-        <h1 className="text-xl font-semibold md:text-2xl">
+        <h1 className="text-md font-semibold md:text-[1.5rem]">
           Payment Management
         </h1>
       </div>
@@ -43,7 +43,7 @@ const PaymentManagement = () => {
       <div className="mt-10 rounded-xl border border-[#D5D5D5] bg-white pt-1">
         {/* Search Bar and Filter */}
         <div className="flex items-center justify-between px-4 py-8 md:px-8">
-          <div className="relative w-2/3 md:w-2/5">
+          <div className="relative w-9/12 md:w-5/12">
             <i className="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-lg text-gray-500" />
             <input
               type="text"

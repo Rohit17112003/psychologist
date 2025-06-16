@@ -48,7 +48,7 @@ const ConsultationHistory = () => {
   return (
     <>
       <div className="rounded-2xl bg-[#2D5356] py-5 pl-5 text-white md:flex-row md:pl-10">
-        <h1 className="text-xl font-semibold md:text-2xl">
+        <h1 className="text-md font-semibold md:text-[1.5rem]">
           Consultation History
         </h1>
       </div>
