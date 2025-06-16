@@ -42,7 +42,7 @@ const UserProfile = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between pr-6 pl-4 md:pl-14">
+      <div className="flex items-center justify-between pr-6 pl-0 md:pl-14">
         <div className="hidden items-center gap-10 md:flex">
           <img src="/image/vedant.svg" alt="user" className="mt-7 h-28 w-28" />
          
@@ -53,7 +53,7 @@ const UserProfile = () => {
       </div>
 
       <div className="mt-5 md:mt-7 pb-16">
-        <div className="mt-5 px-6">
+        <div className="mt-5 md:px-6">
           <form className="grid gap-x-14 gap-y-8 md:grid-cols-2 text-hcolor">
             <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
               <i className="ri-user-3-fill text-secondary text-2xl"></i>
