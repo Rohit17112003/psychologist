@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { FaCheck } from "react-icons/fa6";
 import { useState } from "react";
 import { MdArrowBackIos } from "react-icons/md";
@@ -53,6 +54,8 @@ const DateSlotSession = () => {
       setMonth(month + 1);
     }
   };
+
+  const router = useRouter();
 
   return (
     <>
