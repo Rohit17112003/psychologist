@@ -56,6 +56,10 @@ const Profile = () => {
 
       <div className="mt-5 md:mt-7 pb-16">
         <div className="mt-5 md:px-6">
+        <div className=" flex md:flex-row flex-col mb-8 md:gap-12 gap-8 justify-between">
+          <h1 className="text-[1rem] md:text-[1.6rem] bg-[#E1F0EF] pl-2 pr-10 text-[#2D5356] font-semibold py-3 w-full rounded-md">Overall Earnings - 10,000.00</h1>
+          <h1 className="text-[1rem] md:text-[1.6rem] bg-[#E1F0EF] pl-2 pr-10 text-[#2D5356] font-semibold py-3 w-full rounded-md">Admin Earnings - 10,000.00</h1>
+        </div>
           <form className="grid gap-x-14 gap-y-8 md:grid-cols-2 text-hcolor">
             <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
               <i className="ri-user-3-fill text-secondary text-2xl"></i>
@@ -85,10 +89,28 @@ const Profile = () => {
               />
             </div>
             <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-user-star-fill text-secondary text-2xl"></i>
+              <i className=" ri-home-8-fill text-secondary text-2xl"></i>
               <input
                 type="text"
                 placeholder="Specialization"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                required
+              />
+            </div>
+             <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className=" ri-home-8-fill text-secondary text-2xl"></i>
+              <input
+                type="text"
+                placeholder="Moralities/Skills/Technics"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                required
+              />
+            </div>
+              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className=" ri-calendar-fill text-secondary text-2xl"></i>
+              <input
+                type="date"
+                placeholder="Moralities/Skills/Technics"
                 className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
                 required
               />
@@ -131,9 +153,18 @@ const Profile = () => {
               <button className="bg-green-500 hover:bg-green-600 text-light rounded-md px-3 py-1 cursor-pointer">Approved</button>
             </div>
             <div className="row-span-2 flex items-start gap-4 rounded-md border border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-camera-ai-fill text-secondary text-2xl"></i>
+              <i className="ri-camera-ai-line text-secondary text-2xl"></i>
               <textarea
                 placeholder={`Chat Consultation - 200\nVideo Consultation - 500\nAudio Consultation - 300`}
+                className="text-hcolor w-full resize-none pt-2.5 text-[1rem] outline-0 md:text-[1.2rem]"
+                rows={3}
+                required
+              />
+            </div>
+             <div className="row-span-2 flex items-start gap-4 rounded-md border border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-home-8-fill text-secondary text-2xl"></i>
+              <input
+                placeholder="Address"
                 className="text-hcolor w-full resize-none pt-2.5 text-[1rem] outline-0 md:text-[1.2rem]"
                 rows={3}
                 required
@@ -156,6 +187,25 @@ const Profile = () => {
                 required
               />
               <button className="text-light bg-hcolor hover:bg-[#203b3d] px-5 py-1 rounded-md text-[1rem] cursor-pointer">Debit</button>
+            </div>
+             <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+              <i className="ri-camera-ai-line text-secondary text-2xl"></i>
+              <input
+                type="text"
+                placeholder="Percentage (30% to 90%)"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                required
+              />
+              <span><i className="ri-arrow-down-s-line"></i></span>
+            </div>
+             <div className="flex items-center justify-between gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+             <i className="ri-bank-fill text-[1rem] md:text-[1.3rem]"></i>
+              <input
+                type="text"
+                placeholder="Account Details & UPI"
+                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                required
+              />
             </div>
           </form>
         </div>

@@ -74,13 +74,13 @@ const AllPsychologists = () => {
       {/* Top Section */}
       <div
         onClick={() => setShowPopup(true)}
-        className="flex cursor-pointer items-center justify-between rounded-2xl bg-[#2D5356] px-2 py-2 text-white md:flex-row md:gap-6 md:px-6"
+        className="flex cursor-pointer items-center justify-between rounded-2xl bg-[#2D5356] px-2 pt-1 text-white md:flex-row md:gap-6 md:px-6"
       >
-        <div className="flex items-center md:gap-10 gap-4">
+        <div className="flex items-center gap-4 md:gap-10">
           <img
             src="../image/psychologits.svg"
             alt="Psychologist Icon"
-            className="w-20 md:w-36"
+            className="w-20 md:w-40"
           />
           <div>
             <h1 className="text-sm font-semibold md:text-[1.7em]">
@@ -106,7 +106,7 @@ const AllPsychologists = () => {
       </div>
 
       {/* Psychologist Cards */}
-      <div className="grid grid-cols-1 gap-7 gap-x-12 px-0 sm:grid-cols-2 md:px-4 lg:grid-cols-3 pb-16">
+      <div className="grid grid-cols-1 gap-7 gap-x-12 px-0 pb-16 sm:grid-cols-2 md:px-4 lg:grid-cols-3">
         {psychologists.map((psych, index) => (
           <div
             key={index}
@@ -118,7 +118,9 @@ const AllPsychologists = () => {
               alt={psych.name}
               className="h-24 w-24 rounded-full object-cover p-2.5"
             />
-            <h2 className="text-primary md:text-lg text-shadow-md font-semibold">{psych.name}</h2>
+            <h2 className="text-primary font-semibold text-shadow-md md:text-lg">
+              {psych.name}
+            </h2>
             <p className="text-sm text-gray-600">{psych.role}</p>
             <p className="text-sm text-gray-500">{psych.experience}</p>
             <button className="mt-2 font-medium text-blue-400 hover:underline">
@@ -130,78 +132,86 @@ const AllPsychologists = () => {
 
       {/* Popup Form */}
       {showPopup && (
-        <div className="bg-opacity-60 fixed inset-0 z-50 flex items-center justify-center bg-[#000000d8]  px-4 h-screen">
-          <div className="relative w-full max-w-md rounded-xl bg-white p-6 border border-gray-200 ">
+        <div className="bg-opacity-60 fixed inset-0 z-50 flex h-screen items-center justify-center bg-[#000000d8] px-4">
+          <div className="relative w-full max-w-md rounded-xl border border-gray-200 bg-white p-6">
             <button
-              className="absolute top-3 right-3 cursor-pointer text-xl text-black bg-[#00000023] hover:bg-[#00000034] rounded-full p-1.5"
+              className="absolute top-3 right-3 cursor-pointer rounded-full bg-[#00000023] p-1.5 text-xl text-black hover:bg-[#00000034]"
               onClick={() => setShowPopup(false)}
             >
               <IoMdClose />
             </button>
             <div className="flex justify-center">
-              <img src="../image/profileEdit.svg" alt="profileEdit" className="pb-4"/>
-              <img src="../image/edit.svg" alt="profileEdit" className=" absolute mt-21 ml-22 cursor-pointer"/>
+              <img
+                src="../image/profileEdit.svg"
+                alt="profileEdit"
+                className="pb-4"
+              />
+              <img
+                src="../image/edit.svg"
+                alt="profileEdit"
+                className="absolute mt-21 ml-22 cursor-pointer"
+              />
             </div>
             <form onSubmit={handleAddPsychologist} className="space-y-4">
-               <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-user-3-fill text-secondary text-2xl"></i>
-              <input
-                type="text"
-                placeholder="Enter Your Name"
-                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                required
-              />
-            </div>
               <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-translate-ai-2 text-secondary text-2xl"></i>
-              <input
-                type="text"
-                placeholder="Language"
-                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                required
-              />
-            </div>
-            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-graduation-cap-fill text-secondary text-2xl"></i>
-              <input
-                type="text"
-                placeholder="Educational Qualififacation"
-                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                required
-              />
-            </div>
-            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-user-5-fill text-secondary text-2xl"></i>
-              <input
-                type="text"
-                placeholder="Experience In Years"
-                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                required
-              />
-            </div>
-           
-            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-user-star-fill text-secondary text-2xl"></i>
-              <input
-                type="text"
-                placeholder="Specialixation"
-                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                required
-              />
-            </div>
-            <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-              <i className="ri-hashtag text-secondary text-2xl"></i>
-              <input
-                type="email"
-                placeholder="Email Id"
-                className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                required
-              />
-            </div>
-           
+                <i className="ri-user-3-fill text-secondary text-2xl"></i>
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                  required
+                />
+              </div>
+              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+                <i className="ri-translate-ai-2 text-secondary text-2xl"></i>
+                <input
+                  type="text"
+                  placeholder="Language"
+                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                  required
+                />
+              </div>
+              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+                <i className="ri-graduation-cap-fill text-secondary text-2xl"></i>
+                <input
+                  type="text"
+                  placeholder="Educational Qualififacation"
+                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                  required
+                />
+              </div>
+              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+                <i className="ri-user-5-fill text-secondary text-2xl"></i>
+                <input
+                  type="text"
+                  placeholder="Experience In Years"
+                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                  required
+                />
+              </div>
+
+              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+                <i className="ri-home-8-fill text-secondary text-2xl"></i>
+                <input
+                  type="text"
+                  placeholder="Specialization"
+                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                  required
+                />
+              </div>
+              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
+                <i className="ri-hashtag text-secondary text-2xl"></i>
+                <input
+                  type="email"
+                  placeholder="Email Id"
+                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
+                  required
+                />
+              </div>
+
               <button
                 type="submit"
-                className="w-full cursor-pointer rounded-md bg-hcolor py-2 text-white hover:bg-[#244747] md:text-[1.2rem] text-[1rem]"
+                className="bg-hcolor w-full cursor-pointer rounded-md py-2 text-[1rem] text-white hover:bg-[#244747] md:text-[1.2rem]"
               >
                 Add Doctor
               </button>

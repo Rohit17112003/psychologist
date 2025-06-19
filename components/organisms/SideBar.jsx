@@ -60,17 +60,17 @@ const SideBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               handleClick={handleLogout}
             />
 
-            <div className="md:pr-20 pr-26 pb-10 flex relative justify-center mt-10">
+            <div className="md:pr-26 pr-26 pb-12 flex relative justify-center mt-10">
               <img
                 src="../image/Question.svg"
                 alt="Question"
                 className="absolute -mt-7"
               />
-              <div className="text-light flex flex-col justify-center rounded-xl bg-blue-600 md:px-2  px-3 pt-12 pb-5 jakarta">
-                <h1 className="text-center text-[1.1rem] md:text-[1.5rem]">
+              <div className="text-light flex flex-col justify-center rounded-xl bg-blue-600 md:px-0  px-2 pt-12 pb-5 jakarta">
+                <h1 className="text-center text-[1.1rem] md:text-[1.4rem]">
                   Help Center
                 </h1>
-                <p className="text-center text-[0.65rem] md:text-[0.75rem] md:py-3 py-2">
+                <p className="text-center text-[0.65rem] md:text-[0.66rem] px-4 md:py-3 py-2">
                   Having Trouble in Exploring Please contact us for more
                   questions.
                 </p>
