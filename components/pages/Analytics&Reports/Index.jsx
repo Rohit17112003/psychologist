@@ -1,5 +1,5 @@
 import React from "react";
-import StatContainer from "@/components/molecules/StatContainer";
+import StatContainerAR from "@/components/molecules/StatContainerAR";
 import data from "@/public/database/nav.json";
 import InboxDiv from "../Dashboard/InboxDiv";
 
@@ -12,7 +12,7 @@ const AnalyticcsPeports = () => {
       </div>
     <section className="grid gap-5 lg:grid-cols-4 px-0 md:px-6 pb-5">
         {stats.map((stat, index) => (
-          <StatContainer key={index} index={index} {...stat} />
+          <StatContainerAR key={index} index={index} {...stat} />
         ))}
       </section>
       <InboxDiv/>

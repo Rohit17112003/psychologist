@@ -95,12 +95,15 @@ const InboxDiv = () => {
   const ceoReviews = reviewsData2;
 
   return (
-    <section className="mt-12 flex md:flex-row flex-col md:w-9/13 md:gap-5 gap-7">
+    <section className="mt-12 flex md:flex-row flex-col md:gap-6 gap-7">
       {/* Larger Container */}
-      <div className="flex-[4] rounded-xl border-x border-gray-100">
-        <h4 className="md:text-md text-sm text-light rounded-t-xl bg-[#386B67] px-6 py-3  abril">
+      <div className="flex-[3] rounded-xl border-x border-gray-100">
+       <div className="text-light rounded-t-xl bg-[#386B67] px-6 py-3 flex justify-between">
+         <h4 className="md:text-md text-sm   abril">
           Patient Reviews for Doctors
         </h4>
+        <p className="text-sm">See All</p>
+       </div>
         {allReviews.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}
@@ -108,9 +111,12 @@ const InboxDiv = () => {
 
       {/* Smaller Container */}
       <div className="flex-[3] rounded-xl border-x border-gray-100">
-        <h4 className="md:text-md text-sm text-light rounded-t-xl bg-[#4D9691] px-6 py-3  abril">
+       <div className=" flex justify-between text-light rounded-t-xl bg-[#4D9691] px-6 py-3">
+         <h4 className="md:text-md text-sm   abril">
           CEO Office Feedback
         </h4>
+        <p className="text-sm">See All</p>
+       </div>
         {ceoReviews.map((review, index) => (
           <ReviewCard2 key={index} {...review} />
         ))}

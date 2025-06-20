@@ -69,6 +69,48 @@ const AllPsychologists = () => {
     router.push("/profile");
   };
 
+const fields = [
+  {
+    label: "Bio",
+    type: "textarea",
+    placeholder:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+  },
+  { label: "Gender", type: "select", options: ["Male", "Female", "Other"] },
+  { label: "Date Of Birth", type: "date" },
+  { label: "Specialization", placeholder: "e.g. Clinical Psychology" },
+  { label: "Education", placeholder: "e.g. M.A. Psychology" },
+  { label: "Experience", placeholder: "e.g. 12 Years" },
+  { label: "Language", placeholder: "e.g. English, Hindi" },
+  { label: "Address", placeholder: "e.g. Delhi, India" },
+  {
+    label: "Moralities/Skills/Technics",
+    placeholder: "e.g. CBT, Mindfulness",
+  },
+  {
+    label: "Consultation Type",
+    type: "select",
+    options: ["Free", "Charged"],
+  },
+  {
+    label: "Chat Consultation Charges/min",
+    placeholder: "₹1000",
+    type: "number",
+  },
+  {
+    label: "Call Consultation Charges/min",
+    placeholder: "₹1000",
+    type: "number",
+  },
+  {
+    label: "Video Consultation Charges/min",
+    placeholder: "₹1000",
+    type: "number",
+  },
+  { label: "Account Details & UPI", placeholder: "e.g. rohit@upi" },
+];
+
+
   return (
     <div className="relative w-full px-0 md:px-2">
       {/* Top Section */}
@@ -132,90 +174,79 @@ const AllPsychologists = () => {
 
       {/* Popup Form */}
       {showPopup && (
-        <div className="bg-opacity-60 fixed inset-0 z-50 flex h-screen items-center justify-center bg-[#000000d8] px-4">
-          <div className="relative w-full max-w-md rounded-xl border border-gray-200 bg-white p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0000008c]">
+          <div className="scrollbar-hidden relative max-h-screen w-full overflow-y-auto md:rounded-lg border border-gray-200 bg-white p-6 md:w-8/12">
+            {/* Close Button */}
             <button
               className="absolute top-3 right-3 cursor-pointer rounded-full bg-[#00000023] p-1.5 text-xl text-black hover:bg-[#00000034]"
               onClick={() => setShowPopup(false)}
             >
               <IoMdClose />
             </button>
-            <div className="flex justify-center">
-              <img
-                src="../image/profileEdit.svg"
-                alt="profileEdit"
-                className="pb-4"
-              />
-              <img
-                src="../image/edit.svg"
-                alt="profileEdit"
-                className="absolute mt-21 ml-22 cursor-pointer"
-              />
-            </div>
-            <form onSubmit={handleAddPsychologist} className="space-y-4">
-              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-                <i className="ri-user-3-fill text-secondary text-2xl"></i>
-                <input
-                  type="text"
-                  placeholder="Enter Your Name"
-                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                  required
-                />
-              </div>
-              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-                <i className="ri-translate-ai-2 text-secondary text-2xl"></i>
-                <input
-                  type="text"
-                  placeholder="Language"
-                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                  required
-                />
-              </div>
-              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-                <i className="ri-graduation-cap-fill text-secondary text-2xl"></i>
-                <input
-                  type="text"
-                  placeholder="Educational Qualififacation"
-                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                  required
-                />
-              </div>
-              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-                <i className="ri-user-5-fill text-secondary text-2xl"></i>
-                <input
-                  type="text"
-                  placeholder="Experience In Years"
-                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                  required
-                />
-              </div>
 
-              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-                <i className="ri-home-8-fill text-secondary text-2xl"></i>
-                <input
-                  type="text"
-                  placeholder="Specialization"
-                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                  required
-                />
-              </div>
-              <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
-                <i className="ri-hashtag text-secondary text-2xl"></i>
-                <input
-                  type="email"
-                  placeholder="Email Id"
-                  className="text-hcolor w-full text-[1rem] outline-0 md:text-[1.2rem]"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="bg-hcolor w-full cursor-pointer rounded-md py-2 text-[1rem] text-white hover:bg-[#244747] md:text-[1.2rem]"
+            {/* Form */}
+  <form className="mx-auto max-w-3xl p-6">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+        {fields.map(({ label, type = "text", placeholder, options = [] }, idx) => (
+          <div key={idx} className="col-span-1">
+            <label className="mb-1 block font-medium md:text-lg text-[#2D5356]">{label}</label>
+            {type === "textarea" ? (
+              <textarea
+                placeholder={placeholder || label}
+                className="w-full rounded border border-gray-300 px-4 py-2 outline-none text-[#2D5356D6] h-18 resize-none"
+              />
+            ) : type === "select" ? (
+              <select
+                defaultValue=""
+                className="w-full rounded border border-gray-300 px-4 py-3 outline-none text-[#2D5356D6]"
               >
-                Add Doctor
-              </button>
-            </form>
+                <option value="" disabled>
+                  {placeholder || `Select ${label}`}
+                </option>
+                {options.map((opt, i) => (
+                  <option key={i} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                type={type}
+                placeholder={placeholder || label}
+                className="w-full rounded border border-gray-300 px-4 py-2 outline-none text-[#2D5356D6]"
+              />
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Upload Documents */}
+      <div className="mt-6">
+        <label className="mb-2 block font-medium text-[#2D5356]">Upload Documents</label>
+        <div className="flex gap-4">
+          {[0, 1, 2].map((index) => (
+            <label
+              key={index}
+              className="flex h-20 w-20 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-gray-400"
+            >
+              <input type="file" className="hidden" />
+              <i className="ri-upload-cloud-2-line text-2xl text-gray-500" />
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Submit */}
+    <span className="flex justify-center">
+        <button
+        type="button"
+        className="mt-8 w-full md:w-7/12  rounded-md bg-[#2D5356] py-3 font-semibold text-white transition hover:bg-[#244747] cursor-pointer"
+      >
+        Add Doctor
+      </button>
+    </span>
+    </form>
+
           </div>
         </div>
       )}

@@ -33,10 +33,12 @@ const Header = ({ isSidebarOpen, setIsSidebarOpen, pageTitle }) => {
       <div className="flex w-2/3 flex-row items-center justify-end gap-2">
         {
           <div className="flex items-center gap-6">
-            <span className="mt-4">
+           <Link href="/notification" className="mt-3">
+             <span>
               <i className="ri-notification-3-fill ri-lg text-primary "></i>
               <p className="bg-red-500 text-light Lato h-5 w-5 rounded-full text-[0.8rem] flex items-center justify-center -mt-9 ml-2.5 absolute">2</p>
             </span>
+           </Link>
             <Link href="/">
              <img src="../image/profile.svg" alt="profile" className="rounded-full"/>
             </Link>
