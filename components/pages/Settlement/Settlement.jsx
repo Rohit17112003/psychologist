@@ -34,7 +34,7 @@ const Settlement = () => {
       name: "Better Surgical Care Starts Here!",
       number: "1234567890",
       timeAgo: "1 mins ago",
-      message: "Talk to an experienced surgeon today. You have a session in 2 hours"
+      message: "Talk to an experienced surgeon today. You have a session in 2 hours" 
     },
   ];
 
@@ -70,7 +70,7 @@ const Settlement = () => {
             />
           </div>
 
-          <div className="flex md:gap-2 gap-4 flex-wrap">
+          <div className="flex md:gap-2 gap-2 justify-center items-center">
             <button className="rounded-full border border-gray-300 px-4 py-1 text-sm">
               All
             </button>
