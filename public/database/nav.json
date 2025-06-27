@@ -33,12 +33,17 @@
       ]
     },
     {
-      "icon": "ri-folder-open-line",
+      "icon": "ri-contract-line",
       "route": "/consultation-history",
       "label": "consultation history"
     },
+       {
+      "icon": "ri-currency-line",
+      "route": "/settlement",
+      "label": "Settlement"
+    },
     {
-      "icon": "ri-bubble-chart-line",
+      "icon": "ri-contract-line",
       "route": "/analytics-reports",
       "label": "analytics & reports"
     }
