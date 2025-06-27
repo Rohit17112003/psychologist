@@ -69,47 +69,46 @@ const AllPsychologists = () => {
     router.push("/profile");
   };
 
-const fields = [
-  {
-    label: "Bio",
-    type: "textarea",
-    placeholder:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-  },
-  { label: "Gender", type: "select", options: ["Male", "Female", "Other"] },
-  { label: "Date Of Birth", type: "date" },
-  { label: "Specialization", placeholder: "e.g. Clinical Psychology" },
-  { label: "Education", placeholder: "e.g. M.A. Psychology" },
-  { label: "Experience", placeholder: "e.g. 12 Years" },
-  { label: "Language", placeholder: "e.g. English, Hindi" },
-  { label: "Address", placeholder: "e.g. Delhi, India" },
-  {
-    label: "Moralities/Skills/Technics",
-    placeholder: "e.g. CBT, Mindfulness",
-  },
-  {
-    label: "Consultation Type",
-    type: "select",
-    options: ["Free", "Charged"],
-  },
-  {
-    label: "Chat Consultation Charges/min",
-    placeholder: "₹1000",
-    type: "number",
-  },
-  {
-    label: "Call Consultation Charges/min",
-    placeholder: "₹1000",
-    type: "number",
-  },
-  {
-    label: "Video Consultation Charges/min",
-    placeholder: "₹1000",
-    type: "number",
-  },
-  { label: "Account Details & UPI", placeholder: "e.g. rohit@upi" },
-];
-
+  const fields = [
+    {
+      label: "Bio",
+      type: "textarea",
+      placeholder:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    },
+    { label: "Gender", type: "select", options: ["Male", "Female", "Other"] },
+    { label: "Date Of Birth", type: "date" },
+    { label: "Specialization", placeholder: "e.g. Clinical Psychology" },
+    { label: "Education", placeholder: "e.g. M.A. Psychology" },
+    { label: "Experience", placeholder: "e.g. 12 Years" },
+    { label: "Language", placeholder: "e.g. English, Hindi" },
+    { label: "Address", placeholder: "e.g. Delhi, India" },
+    {
+      label: "Moralities/Skills/Technics",
+      placeholder: "e.g. CBT, Mindfulness",
+    },
+    {
+      label: "Consultation Type",
+      type: "select",
+      options: ["Free", "Charged"],
+    },
+    {
+      label: "Chat Consultation Charges/min",
+      placeholder: "₹1000",
+      type: "number",
+    },
+    {
+      label: "Call Consultation Charges/min",
+      placeholder: "₹1000",
+      type: "number",
+    },
+    {
+      label: "Video Consultation Charges/min",
+      placeholder: "₹1000",
+      type: "number",
+    },
+    { label: "Account Details & UPI", placeholder: "e.g. rohit@upi" },
+  ];
 
   return (
     <div className="relative w-full px-0 md:px-2">
@@ -175,78 +174,86 @@ const fields = [
       {/* Popup Form */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0000008c]">
-          <div className="scrollbar-hidden relative max-h-screen w-full overflow-y-auto md:rounded-lg border border-gray-200 bg-white p-6 md:w-8/12">
+          <div className="scrollbar-hidden relative max-h-screen w-full overflow-y-auto border border-gray-200 bg-white p-0 md:p-6 pt-10 md:w-8/12 md:rounded-lg">
             {/* Close Button */}
             <button
-              className="absolute top-3 right-3 cursor-pointer rounded-full bg-[#00000023] p-1.5 text-xl text-black hover:bg-[#00000034]"
+              className="absolute top-8 right-5 md:right-3 md:top-3 cursor-pointer rounded-full bg-[#00000023] p-1.5 text-xl text-black hover:bg-[#00000034]"
               onClick={() => setShowPopup(false)}
             >
               <IoMdClose />
             </button>
 
             {/* Form */}
-  <form className="mx-auto max-w-3xl p-6">
-      <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
-        {fields.map(({ label, type = "text", placeholder, options = [] }, idx) => (
-          <div key={idx} className="col-span-1">
-            <label className="mb-1 block font-medium md:text-lg text-[#2D5356]">{label}</label>
-            {type === "textarea" ? (
-              <textarea
-                placeholder={placeholder || label}
-                className="w-full rounded border border-gray-300 px-4 py-2 outline-none text-[#2D5356D6] h-18 resize-none"
-              />
-            ) : type === "select" ? (
-              <select
-                defaultValue=""
-                className="w-full rounded border border-gray-300 px-4 py-3 outline-none text-[#2D5356D6]"
-              >
-                <option value="" disabled>
-                  {placeholder || `Select ${label}`}
-                </option>
-                {options.map((opt, i) => (
-                  <option key={i} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
-            ) : (
-              <input
-                type={type}
-                placeholder={placeholder || label}
-                className="w-full rounded border border-gray-300 px-4 py-2 outline-none text-[#2D5356D6]"
-              />
-            )}
-          </div>
-        ))}
-      </div>
+            <form className="mx-auto max-w-3xl p-6">
+              <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+                {fields.map(
+                  (
+                    { label, type = "text", placeholder, options = [] },
+                    idx,
+                  ) => (
+                    <div key={idx} className="col-span-1">
+                      <label className="mb-1 block font-medium text-[#2D5356] md:text-lg">
+                        {label}
+                      </label>
+                      {type === "textarea" ? (
+                        <textarea
+                          placeholder={placeholder || label}
+                          className="h-18 w-full resize-none rounded border border-gray-300 px-4 py-2 text-[#2D5356D6] outline-none"
+                        />
+                      ) : type === "select" ? (
+                        <select
+                          defaultValue=""
+                          className="w-full rounded border border-gray-300 px-4 py-3 text-[#2D5356D6] outline-none"
+                        >
+                          <option value="" disabled>
+                            {placeholder || `Select ${label}`}
+                          </option>
+                          {options.map((opt, i) => (
+                            <option key={i} value={opt}>
+                              {opt}
+                            </option>
+                          ))}
+                        </select>
+                      ) : (
+                        <input
+                          type={type}
+                          placeholder={placeholder || label}
+                          className="w-full rounded border border-gray-300 px-4 py-2 text-[#2D5356D6] outline-none"
+                        />
+                      )}
+                    </div>
+                  ),
+                )}
+              </div>
 
-      {/* Upload Documents */}
-      <div className="mt-6">
-        <label className="mb-2 block font-medium text-[#2D5356]">Upload Documents</label>
-        <div className="flex gap-4">
-          {[0, 1, 2].map((index) => (
-            <label
-              key={index}
-              className="flex h-20 w-20 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-gray-400"
-            >
-              <input type="file" className="hidden" />
-              <i className="ri-upload-cloud-2-line text-2xl text-gray-500" />
-            </label>
-          ))}
-        </div>
-      </div>
+              {/* Upload Documents */}
+              <div className="mt-6">
+                <label className="mb-2 block font-medium text-[#2D5356]">
+                  Upload Documents
+                </label>
+                <div className="flex gap-4">
+                  {[0, 1, 2].map((index) => (
+                    <label
+                      key={index}
+                      className="flex h-20 w-20 cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-gray-400"
+                    >
+                      <input type="file" className="hidden" />
+                      <i className="ri-upload-cloud-2-line text-2xl text-gray-500" />
+                    </label>
+                  ))}
+                </div>
+              </div>
 
-      {/* Submit */}
-    <span className="flex justify-center">
-        <button
-        type="button"
-        className="mt-8 w-full md:w-7/12  rounded-md bg-[#2D5356] py-3 font-semibold text-white transition hover:bg-[#244747] cursor-pointer"
-      >
-        Add Doctor
-      </button>
-    </span>
-    </form>
-
+              {/* Submit */}
+              <span className="flex justify-center">
+                <button
+                  type="button"
+                  className="mt-8 w-full cursor-pointer rounded-md bg-[#2D5356] py-3 font-semibold text-white transition hover:bg-[#244747] md:w-7/12"
+                >
+                  Add Doctor
+                </button>
+              </span>
+            </form>
           </div>
         </div>
       )}
