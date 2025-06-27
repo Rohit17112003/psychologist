@@ -142,7 +142,7 @@ const fields = [
         <i className="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 transform text-lg text-gray-500 md:left-8" />
         <input
           type="text"
-          placeholder="Search here using name/number..."
+          placeholder="Search here using ID...."
           className="w-full rounded-full border border-gray-300 py-2 pr-4 pl-10 outline-none focus:ring-[#2D5356]"
         />
       </div>
@@ -160,7 +160,7 @@ const fields = [
               alt={psych.name}
               className="h-24 w-24 rounded-full object-cover p-2.5"
             />
-            <h2 className="text-primary font-semibold text-shadow-md md:text-lg">
+            <h2 className="text-hcolor abril font-semibold text-shadow-md md:text-[1rem]">
               {psych.name}
             </h2>
             <p className="text-sm text-gray-600">{psych.role}</p>

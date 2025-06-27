@@ -9,7 +9,7 @@ const alegreyaSans = Alegreya_Sans({
 });
 
 export const metadata = {
-  title: "Auction",
+  title: "Psychologist",
   description: "Less Price Top Bidder",
 };
 

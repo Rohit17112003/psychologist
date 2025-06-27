@@ -33,10 +33,7 @@ const UserProfile = () => {
             Users Details
           </h1>
           <div className="hidden items-center gap-2 px-10 md:flex">
-            <button className="text-light flex cursor-pointer items-center gap-2 rounded-md bg-red-500 px-5 py-2 text-[0.9rem] hover:bg-red-600 md:text-[1.3rem]">
-              Delete <MdDelete />
-            </button>
-            <button className="text-light flex cursor-pointer items-center gap-2 rounded-md bg-green-500 px-5 py-2 text-[0.9rem] hover:bg-green-600 md:text-[1.3rem]">
+            <button className="text-light flex cursor-pointer items-center gap-2 rounded-md bg-green-500 px-4 py-2 text-[0.9rem] hover:bg-green-600 md:text-[1.3rem]">
               Edit <MdEdit />
             </button>
           </div>
@@ -47,8 +44,8 @@ const UserProfile = () => {
           <img src="/image/vedant.svg" alt="user" className="mt-7 h-28 w-28" />
          
         </div>
-        <button className="text-light mt-7 rounded-md bg-[#F13E3E] px-4 py-2 text-[1rem] md:text-[1.3rem] cursor-pointer">
-          Block User
+        <button className="text-light mt-7 rounded-md bg-[#F13E3E] px-4 md:px-8 py-2 text-[1rem] md:text-[1.3rem] cursor-pointer">
+          Block
         </button>
       </div>
 

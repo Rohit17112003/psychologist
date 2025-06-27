@@ -44,28 +44,13 @@ const InboxTable = () => {
         <table className="text-primary w-full min-w-[700px] border-collapse">
           <thead>
             <tr className="bg-[#386B67] text-gray-700">
-              <th className="md:text-md abril text-light py-3 pl-4 text-left text-sm tracking-wider md:pl-9">
-                Inbox
-                <i className="ri-delete-bin-6-line cursor-pointer pl-8"></i>
-                <i className="ri-star-line cursor-pointer px-3"></i>
+              <th className="abril text-light py-3 pl-6 text-left text-sm tracking-wider md:pl-7 md:text-[1rem]">
+                Quires
               </th>
-              <th className="px-0 py-3 text-left text-sm font-medium">
-                <div className="flex items-center gap-2">
-                  <button className="bg-light cursor-pointer rounded-sm px-6 py-0.5">
-                    All
-                  </button>
-                  <button className="bg-light cursor-pointer rounded-sm px-6 py-0.5">
-                    Read
-                  </button>
-                </div>
-              </th>
-              <th className="py-3 pl-2 text-left text-sm font-medium md:pl-0">
-                <button className="bg-light cursor-pointer rounded-sm px-4 py-0.5">
-                  Unread
-                </button>
-              </th>
-              <th className="cursor-pointer px-4 py-3 text-left text-sm font-medium">
-                <button className="text-light"> All View</button>
+              <th></th>
+              <th></th>
+              <th>
+                <button className="text-light">See All</button>
               </th>
             </tr>
           </thead>
@@ -76,19 +61,19 @@ const InboxTable = () => {
                 className="cursor-pointer hover:bg-gray-200"
                 onClick={handleEmailInbox}
               >
-                <td className="px-4 py-2 text-sm font-semibold whitespace-nowrap md:px-6">
+                <td className="px-1 py-2.5 text-sm font-semibold whitespace-nowrap md:px-1">
                   <div className="text-hcolor flex items-center gap-2">
                     <BsThreeDotsVertical />
                     <i className="ri-checkbox-blank-line"></i>
                     <span className="abril text-[0.8rem]">{msg.name}</span>
                   </div>
                 </td>
-                <td className="text-light px-4 py-2 text-sm whitespace-nowrap md:px-0">
+                <td className="text-light pl-8 py-2 text-sm whitespace-nowrap md:pl-6">
                   <span className="rounded-full bg-[#2D5356AD] px-2 py-0.5">
                     {msg.email}
                   </span>
                 </td>
-                <td className="px-4 py-2 text-sm break-words whitespace-normal md:px-0">
+                <td className="pl-8 py-2 text-sm break-words whitespace-normal md:pl-2">
                   {msg.lorem}
                 </td>
                 <td className="px-4 py-2 text-sm whitespace-nowrap">

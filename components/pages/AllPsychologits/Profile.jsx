@@ -33,32 +33,30 @@ const Profile = () => {
             Psychologist/Counselor Details
           </h1>
           <div className="hidden items-center gap-2 px-10 md:flex">
-            <button className="text-light flex cursor-pointer items-center gap-2 rounded-md bg-red-500 px-5 py-2 text-[0.9rem] hover:bg-red-600 md:text-[1.3rem]">
-              Delete <MdDelete />
-            </button>
-            <button className="text-light flex cursor-pointer items-center gap-2 rounded-md bg-green-500 px-5 py-2 text-[0.9rem] hover:bg-green-600 md:text-[1.3rem]">
+         
+            <button className="text-light flex cursor-pointer items-center gap-2 rounded-md bg-green-500 px-4 py-2 text-[0.9rem] hover:bg-green-600 md:text-[1.2rem]">
               Edit <MdEdit />
             </button>
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between pr-6 pl-0 md:pl-14">
-        <div className="hidden items-center gap-10 md:flex">
+      <div className="flex items-center justify-between pr-6 pl-0 md:pl-12">
+        <div className="hidden items-center gap-8 md:flex">
           <img src="/image/user.svg" alt="user" className="mt-7 h-28 w-28" />
-          <h1 className="text-secondary mt-7 rounded-md bg-[#E1F0EF] px-4 py-3 text-[1.2rem] md:text-[1.6rem]">
+          <h1 className="text-secondary font-semibold  mt-7 rounded-md bg-[#E1F0EF] px-4 py-3.5 md:pr-14 text-[1.2rem] md:text-[1.6rem]">
             Wallet Amount - 10,000.00
           </h1>
         </div>
-        <button className="text-light mt-7 rounded-md bg-[#F13E3E] px-4 py-2 text-[1rem] md:text-[1.3rem] cursor-pointer">
-          Block User
+        <button className="text-light mt-7 rounded-md bg-[#F13E3E] px-7 tracking-wide py-2.5 text-[1rem] md:text-[1.3rem] cursor-pointer">
+          Inactive
         </button>
       </div>
 
       <div className="mt-5 md:mt-7 pb-16">
         <div className="mt-5 md:px-6">
         <div className=" flex md:flex-row flex-col mb-8 md:gap-12 gap-8 justify-between">
-          <h1 className="text-[1rem] md:text-[1.6rem] bg-[#E1F0EF] pl-2 pr-10 text-[#2D5356] font-semibold py-3 w-full rounded-md">Overall Earnings - 10,000.00</h1>
-          <h1 className="text-[1rem] md:text-[1.6rem] bg-[#E1F0EF] pl-2 pr-10 text-[#2D5356] font-semibold py-3 w-full rounded-md">Admin Earnings - 10,000.00</h1>
+          <h1 className="text-[1rem] md:text-[1.6rem] bg-[#E1F0EF] pl-3 pr-10 text-[#2D5356] font-semibold py-3.5 w-full rounded-md">Overall Earnings - 10,000.00</h1>
+          <h1 className="text-[1rem] md:text-[1.6rem] bg-[#E1F0EF] pl-3 pr-10 text-[#2D5356] font-semibold py-3.5 w-full rounded-md">Admin Earnings - 10,000.00</h1>
         </div>
           <form className="grid gap-x-14 gap-y-8 md:grid-cols-2 text-hcolor">
             <div className="flex items-center gap-4 rounded-md border-1 border-[#D1D5DB] px-3 py-1.5 ring ring-[#d1d5db58]">
