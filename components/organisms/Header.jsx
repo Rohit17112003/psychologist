@@ -40,7 +40,7 @@ const Header = ({ isSidebarOpen, setIsSidebarOpen, pageTitle }) => {
             </span>
            </Link>
             <Link href="/">
-             <img src="../image/profile.svg" alt="profile" className="rounded-full"/>
+             {/* <img src="../image/profile.svg" alt="profile" className="rounded-full"/> */}
             </Link>
           </div>
         }

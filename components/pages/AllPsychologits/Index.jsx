@@ -174,10 +174,10 @@ const AllPsychologists = () => {
       {/* Popup Form */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0000008c]">
-          <div className="scrollbar-hidden relative max-h-screen w-full overflow-y-auto border border-gray-200 bg-white p-0 md:p-6 pt-10 md:w-8/12 md:rounded-lg">
+          <div className="scrollbar-hidden relative max-h-screen w-full overflow-y-auto border border-gray-200 bg-white p-0 md:p-6 pt-12 md:pt-10 md:w-8/12 md:rounded-lg">
             {/* Close Button */}
             <button
-              className="absolute top-8 right-5 md:right-3 md:top-3 cursor-pointer rounded-full bg-[#00000023] p-1.5 text-xl text-black hover:bg-[#00000034]"
+              className="absolute top-12 right-5 md:right-3 md:top-3 cursor-pointer rounded-full bg-[#00000023] p-1.5 text-xl text-black hover:bg-[#00000034]"
               onClick={() => setShowPopup(false)}
             >
               <IoMdClose />

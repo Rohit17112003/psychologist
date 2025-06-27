@@ -14,7 +14,7 @@ const EmailInbox = () => {
               className="ri-arrow-left-line mr-2 cursor-pointer font-normal md:mr-9"
             ></i>
           </span>
-          Inbox
+          Quires
         </h1>
       </div>
       <div className="text-primary bg-light mt-6 overflow-x-auto rounded-md border border-gray-50">
