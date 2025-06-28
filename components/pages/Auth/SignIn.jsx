@@ -5,12 +5,17 @@ import { FaPhoneAlt, FaCheckCircle } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { IoMdLock } from "react-icons/io";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const SignIn = () => {
   const [mobile, setMobile] = useState("");
   const [otp, setOtp] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
+  const handlehomePage=()=>{
+    router.push("/");
+  }
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row items-stretch overflow-hidden justify-center bg-[#fdf6ec] px-6 py-8">
@@ -44,14 +49,14 @@ const SignIn = () => {
             />
           </div>
 
-          <button className="bg-[#294646] text-white font-semibold py-2.5 rounded-full w-full md:w-64 mt-4">
+          <button onClick={handlehomePage} type="button" className="bg-[#294646] cursor-pointer text-white font-semibold py-2.5 rounded-full w-full md:w-64 mt-4">
             LOGIN
           </button>
         </div>
       </form>
 
       {/* Right Side - Email Login */}
-      <form className="md:w-1/2 w-full mt-10 md:mt-16 flex flex-col  pl-14 ml-10  relative">
+      <form className="md:w-1/2 w-full mt-10 md:mt-16 flex flex-col  md:pl-14 md:ml-10  relative">
         <div className="w-full md:w-7/13 bg-white p-6 rounded-lg space-y-3 border border-[#D9D9D9]">
           <h2 className="text-xl font-bold text-[#294646] text-center flex justify-center items-center">
             Login<span className="ml-1 text-green-600">✔</span>
@@ -88,11 +93,11 @@ const SignIn = () => {
             </div>
           </div>
 
-          <button className="bg-[#294646] text-white font-semibold py-1.5 rounded-full my-5 w-full">
+          <button onClick={handlehomePage} type="button" className="bg-[#294646] text-white font-semibold py-1.5 rounded-full my-5 w-full cursor-pointer">
             Log in
           </button>
 
-          <button className="border border-[#c9b8b8]  text-[#294646] py-1.5 rounded-sm w-full mb-6">
+          <button className="border border-[#c9b8b8]  text-[#294646] py-1.5 rounded-sm w-full mb-6 cursor-pointer">
             Sign up
           </button>
         </div>

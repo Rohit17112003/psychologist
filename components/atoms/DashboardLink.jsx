@@ -30,12 +30,21 @@ const DashboardLink = ({
           className={`${
             active
               ? "bg-primary/10 text-primary"
-              : "bg-transparent text-secondary"
-          } flex w-full flex-row items-center justify-between rounded-md px-3 py-2.5 transition-all duration-200 hover:bg-primary/5 hover:text-primary`}
+              : "text-secondary bg-transparent"
+          } hover:bg-primary/5 hover:text-primary flex w-full flex-row items-center justify-between rounded-md px-1 py-2.5 transition-all duration-200`}
         >
           <span className="text-md flex items-center gap-1.5">
+            
+             <span
+              className={`ml-2 ${label === "Log out" ? "text-red-600" : "text-gray-800"}`}
+            >
             <i className={`${heroIcon} ri-lg`}></i>
-            <span className="font-medium capitalize">{label}</span>
+            </span>
+            <span
+              className={`ml-2 ${label === "Log out" ? "text-red-600" : "text-gray-800"}`}
+            >
+              {label}
+            </span>
           </span>
           {subMenu.length > 0 && (
             <i
@@ -53,7 +62,7 @@ const DashboardLink = ({
             <Link
               key={index}
               href={item.route}
-              className="ms-6 flex items-center gap-2 rounded-md px-3 py-2.5 text-sm text-gray-500 hover:bg-primary/10 hover:text-primary"
+              className="hover:bg-primary/10 hover:text-primary ms-6 flex items-center gap-2 rounded-md px-3 py-2.5 text-sm text-gray-500"
             >
               <i className={`${item.icon} ri-md`}></i>
               <span className="capitalize">{item.label}</span>
