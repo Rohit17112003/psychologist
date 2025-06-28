@@ -1,4 +1,5 @@
-"use client" 
+"use client";
+import { useRouter } from "next/navigation";
 
 const reviewsData = [
   {
@@ -24,7 +25,7 @@ const reviewsData2 = [
     name2: "Ramesh Kumar",
     date2: "4/8/23",
     review2:
-     "provided excellent care and attention during my visits. I felt confident in their expertise and appreciated their friendly demeanor.",
+      "provided excellent care and attention during my visits. I felt confident in their expertise and appreciated their friendly demeanor.",
     rating2: 5,
     img2: "../image/Ellipse 3.svg",
   },
@@ -32,21 +33,22 @@ const reviewsData2 = [
     name2: "Ramesh Kumar",
     date2: "4/8/23",
     review2:
-     "provided excellent care and attention during my visits. I felt confident in their expertise and appreciated their friendly demeanor.",
+      "provided excellent care and attention during my visits. I felt confident in their expertise and appreciated their friendly demeanor.",
     rating2: 5,
     img2: "../image/Ellipse 4.svg",
   },
 ];
 
-const ReviewCard = ({ name, date, review, rating ,img}) => {
+const ReviewCard = ({ name, date, review, rating, img }) => {
+
   return (
     <div className="bg-white px-6 py-2">
-   <div className="flex items-center gap-2">
-   <img src={img} alt="Ellipse" className="rounded-full"/>
-       <h3 className="text-hcolor md:text-md text-sm abril">{name}</h3>
-   </div>
       <div className="flex items-center gap-2">
-        <p className="flex text-md text-[#2CB24B]">
+        <img src={img} alt="Ellipse" className="rounded-full" />
+        <h3 className="text-hcolor md:text-md abril text-sm">{name}</h3>
+      </div>
+      <div className="flex items-center gap-2">
+        <p className="text-md flex text-[#2CB24B]">
           {Array.from({ length: rating }).map((_, i) => (
             <i
               key={i}
@@ -64,15 +66,15 @@ const ReviewCard = ({ name, date, review, rating ,img}) => {
   );
 };
 
-const ReviewCard2 = ({ name2, date2, review2, rating2 ,img2}) => {
+const ReviewCard2 = ({ name2, date2, review2, rating2, img2 }) => {
   return (
     <div className="bg-white px-6 py-2">
-   <div className="flex items-center gap-2">
-   <img src={img2} alt="Ellipse" className="rounded-full"/>
-       <h3 className="text-hcolor md:text-md  text-sm abril ">{name2}</h3>
-   </div>
       <div className="flex items-center gap-2">
-        <p className="flex text-md text-[#2CB24B]">
+        <img src={img2} alt="Ellipse" className="rounded-full" />
+        <h3 className="text-hcolor md:text-md abril text-sm">{name2}</h3>
+      </div>
+      <div className="flex items-center gap-2">
+        <p className="text-md flex text-[#2CB24B]">
           {Array.from({ length: rating2 }).map((_, i) => (
             <i
               key={i}
@@ -90,20 +92,29 @@ const ReviewCard2 = ({ name2, date2, review2, rating2 ,img2}) => {
   );
 };
 
-const InboxDiv = () => {
+const ReviewFeedback = () => {
   const allReviews = reviewsData;
   const ceoReviews = reviewsData2;
+    const router = useRouter();
+  const handlePatientReviews = () => {
+    router.push("/patient-reviews");
+  };
+
+    const handleSeoFeedback = () => {
+    router.push("/seo-feedback");
+  };
+
 
   return (
-    <section className="mt-12 flex md:flex-row flex-col md:gap-6 gap-7">
+    <section className="mt-12 flex flex-col gap-7 md:flex-row md:gap-6">
       {/* Larger Container */}
       <div className="flex-[3] rounded-xl border-x border-gray-100">
-       <div className="text-light rounded-t-xl bg-[#386B67] px-6 py-3 flex justify-between">
-         <h4 className="md:text-md text-sm   abril">
-          Patient Reviews for Doctors
-        </h4>
-        <p className="text-sm">See All</p>
-       </div>
+        <div className="text-light flex justify-between rounded-t-xl bg-[#386B67] px-6 py-3">
+          <h4 className="md:text-md abril text-sm">
+            Patient Reviews for Doctors
+          </h4>
+          <p className="cursor-pointer text-sm" onClick={handlePatientReviews}>See All</p>
+        </div>
         {allReviews.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}
@@ -111,12 +122,10 @@ const InboxDiv = () => {
 
       {/* Smaller Container */}
       <div className="flex-[3] rounded-xl border-x border-gray-100">
-       <div className=" flex justify-between text-light rounded-t-xl bg-[#4D9691] px-6 py-3">
-         <h4 className="md:text-md text-sm   abril">
-          CEO Office Feedback
-        </h4>
-        <p className="text-sm">See All</p>
-       </div>
+        <div className="text-light flex justify-between rounded-t-xl bg-[#4D9691] px-6 py-3">
+          <h4 className="md:text-md abril text-sm">CEO Office Feedback</h4>
+          <p className="cursor-pointer text-sm" onClick={handleSeoFeedback}>See All</p>
+        </div>
         {ceoReviews.map((review, index) => (
           <ReviewCard2 key={index} {...review} />
         ))}
@@ -125,5 +134,4 @@ const InboxDiv = () => {
   );
 };
 
-
-export default InboxDiv;
+export default ReviewFeedback;

@@ -1,7 +1,7 @@
 import StatContainer from "../molecules/StatContainer";
 import data from "@/public/database/nav.json";
-import InboxTable from "./Dashboard/Inbox";
-import InboxDiv from "./Dashboard/InboxDiv";
+import Quires from "./Dashboard/Quires";
+import ReviewFeedback from "./Dashboard/ReviewFeedback";
 
 const HomePage = () => {
   const { stats } = data;
@@ -15,9 +15,9 @@ const HomePage = () => {
         </section>
       </div>
 
-      <InboxTable />
+      <Quires />
 
-      <InboxDiv />
+      <ReviewFeedback />
     </>
   );
 };

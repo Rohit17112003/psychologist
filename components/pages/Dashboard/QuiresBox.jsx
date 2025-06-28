@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { HiDotsVertical } from "react-icons/hi";
 
-const EmailInbox = () => {
+const QuiresBox = () => {
   const router = useRouter();
   return (
     <>
@@ -59,4 +59,4 @@ const EmailInbox = () => {
   );
 };
 
-export default EmailInbox;
+export default QuiresBox;

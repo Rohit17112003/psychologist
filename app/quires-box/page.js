@@ -1,11 +1,11 @@
 import React from "react";
-import EmailInbox from "@/components/pages/Dashboard/EmailInbox";
+import QuiresBox from "@/components/pages/Dashboard/QuiresBox";
 import MainLayout from "@/components/templates/MainLayout";
 
 const page = () => {
   return (
     <MainLayout pageTitle={"Hi Rohit 👋"}>
-      <EmailInbox />
+      <QuiresBox />
     </MainLayout>
   );
 };

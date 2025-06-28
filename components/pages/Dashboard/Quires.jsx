@@ -33,11 +33,15 @@ const messages = [
   },
 ];
 
-const InboxTable = () => {
+const Quires = () => {
   const router = useRouter();
   const handleEmailInbox = () => {
-    router.push("/email-inbox");
+    router.push("/quires-box");
   };
+  const handleAllQuires = () => {
+    router.push("/all-quires");
+  };
+
   return (
     <div className="mx-auto mt-8 px-0 md:mt-16">
       <div className="overflow-x-auto rounded-lg bg-white">
@@ -50,7 +54,9 @@ const InboxTable = () => {
               <th></th>
               <th></th>
               <th>
-                <button className="text-light">See All</button>
+                <button onClick={handleAllQuires} className="text-light cursor-pointer text-[0.9rem] font-normal">
+                  See All
+                </button>
               </th>
             </tr>
           </thead>
@@ -68,12 +74,12 @@ const InboxTable = () => {
                     <span className="abril text-[0.8rem]">{msg.name}</span>
                   </div>
                 </td>
-                <td className="text-light pl-8 py-2 text-sm whitespace-nowrap md:pl-6">
+                <td className="text-light py-2 pl-8 text-sm whitespace-nowrap md:pl-6">
                   <span className="rounded-full bg-[#2D5356AD] px-2 py-0.5">
                     {msg.email}
                   </span>
                 </td>
-                <td className="pl-8 py-2 text-sm break-words whitespace-normal md:pl-2">
+                <td className="py-2 pl-8 text-sm break-words whitespace-normal md:pl-2">
                   {msg.lorem}
                 </td>
                 <td className="px-4 py-2 text-sm whitespace-nowrap">
@@ -88,4 +94,4 @@ const InboxTable = () => {
   );
 };
 
-export default InboxTable;
+export default Quires;

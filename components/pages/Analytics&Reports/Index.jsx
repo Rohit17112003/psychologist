@@ -1,7 +1,7 @@
 import React from "react";
 import StatContainerAR from "@/components/molecules/StatContainerAR";
 import data from "@/public/database/nav.json";
-import InboxDiv from "../Dashboard/InboxDiv";
+import InboxDiv from "../Dashboard/ReviewFeedback";
 
 const AnalyticcsPeports = () => {
     const { stats } = data;
